@@ -1,3 +1,26 @@
 .red {
     background-color: gray;
 }
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.container{
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+}
+
+.masthead {
+  height: 100vh;
+  min-height: 500px;
+  background-image: url('/static/images/reykjavik_2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
