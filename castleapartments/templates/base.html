@@ -17,37 +17,74 @@
     </head>
     <body>
     <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Forsíða</a>
-    </div>
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="{% url 'index-eignir' %}">Eignir <span class="sr-only">(current)</span></a></li>
-        <li><a href="{% url 'index-opinhus' %}">Opin hús</a></li>
-        <li><a href="{% url 'index-verdmat' %}">Verðmat</a></li>
-        <li><a href="{% url 'index-starfsmenn' %}">Starfsmenn</a></li>
-        <li><a href="{% url 'index-umokkur' %}">Um okkur</a></li>
+          </button>
+          <a class="navbar-brand" href="#">Forsíða</a>
+        </div>
 
-      </ul>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="{% url 'index-eignir' %}">Eignir <span class="sr-only">(current)</span></a></li>
+            <li><a href="{% url 'index-opinhus' %}">Opin hús</a></li>
+            <li><a href="{% url 'index-verdmat' %}">Verðmat</a></li>
+            <li><a href="{% url 'index-starfsmenn' %}">Starfsmenn</a></li>
+            <li><a href="{% url 'index-umokkur' %}">Um okkur</a></li>
 
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+          </ul>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+    </nav>
+
     <div class="container">
     {% block content %}
 
     {% endblock %}
     </div>>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+        <p class="navbar-text">Menntavegur 1, 101 Reykjavík</p>
+        <p class="navbar-text">555-5555</p>
+        <p class="navbar-text"> | LOGO SEM Á AÐ VERA HÆGT AP ÝTA Á |</p>
+
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Forsíða</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+            <li><a href="{% url 'index-eignir' %}">Eignir <span class="sr-only">(current)</span></a></li>
+            <li><a href="{% url 'index-opinhus' %}">Opin hús</a></li>
+            <li><a href="{% url 'index-starfsmenn' %}">Starfsmenn</a></li>
+            <li><a href="{% url 'index-umokkur' %}">Um okkur</a></li>
+
+            </ul>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+    </nav>
+
+
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </body>
