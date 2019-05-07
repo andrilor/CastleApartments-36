@@ -22,6 +22,6 @@ urlpatterns = [
     path('starfsmenn/', include('starfsmenn.urls')),
     path('umokkur/', include('umokkur.urls')),
     path('eignir/', include('eignir.urls')),
-    path('verðmat', include('verðmat.urls')),
+    path('verdmat', include('verdmat.urls')),
     path('admin/', admin.site.urls),
 ]
