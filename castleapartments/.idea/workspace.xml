@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb345594-0800-4f2a-acfa-6734de9118f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/castleapartments.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/castleapartments.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/verðmat/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/verdmat/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/forsida/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/forsida/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +31,29 @@
     <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/forsida/index.html">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/verdmat/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="6" selection-end-column="14" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -74,6 +94,7 @@
         <option value="$PROJECT_DIR$/static/css/main.css" />
         <option value="$PROJECT_DIR$/castleapartments/settings.py" />
         <option value="$PROJECT_DIR$/eignir/models.py" />
+        <option value="$PROJECT_DIR$/templates/forsida/index.html" />
       </list>
     </option>
   </component>
@@ -96,17 +117,6 @@
             <path>
               <item name="castleapartments" type="b2602c69:ProjectViewProjectNode" />
               <item name="castleapartments" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="castleapartments" type="b2602c69:ProjectViewProjectNode" />
-              <item name="castleapartments" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="castleapartments" type="b2602c69:ProjectViewProjectNode" />
-              <item name="castleapartments" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="forsida" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -181,22 +191,22 @@
       <workItem from="1557152759912" duration="48000" />
       <workItem from="1557153230310" duration="1255000" />
       <workItem from="1557220399595" duration="752000" />
-      <workItem from="1557221193106" duration="1385000" />
+      <workItem from="1557221193106" duration="2898000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14249000" />
+    <option name="totallyTimeSpent" value="15762000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18900804" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18900804" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3281471" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3281471" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3281471" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994602" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -207,7 +217,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3281471" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3281471" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.3281471" />
       <window_info anchor="bottom" id="manage.py@castleapartments" order="13" weight="0.32928476" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -248,13 +258,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/verðmat/base.html" />
-    <entry file="file://$PROJECT_DIR$/templates/verdmat/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/eignir/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -376,13 +379,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -420,8 +416,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/verdmat/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/forsida/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
