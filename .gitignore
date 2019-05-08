@@ -1,4 +1,4 @@
-
+﻿
 # Created by https://www.gitignore.io/api/django,pycharm
 # Edit at https://www.gitignore.io/?templates=django,pycharm
 
@@ -140,6 +140,7 @@ dmypy.json
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/workspace.xml
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
