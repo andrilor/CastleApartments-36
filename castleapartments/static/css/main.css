@@ -6,6 +6,32 @@
     margin-bottom: 0px;
 }
 
+.search_bar {
+	width: 90%;
+	height: 18%;
+	background-color: lightgrey;
+    border-radius: 15px;
+
+	position: absolute;
+	top:50%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	margin: auto;
+}
+
+.col-lg-6{
+    top: 25%;
+    width: 100%;
+}
+
+#dd {
+    margin-right: 4%;
+    margin-bottom: 1%;
+    width: 10%;
+}
+
 .container{
   padding-right: 0px;
   padding-left: 0px;
