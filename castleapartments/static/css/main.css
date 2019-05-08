@@ -32,6 +32,10 @@
     width: 10%;
 }
 
+.form-control {
+    border-radius: 15px;
+}
+
 .container{
   padding-right: 0px;
   padding-left: 0px;
