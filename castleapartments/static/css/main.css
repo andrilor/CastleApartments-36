@@ -36,6 +36,29 @@
     border-radius: 15px;
 }
 
+h1 {
+    margin-top: 10%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: center;
+}
+
+.opin-hus-container {
+	width: 90%;
+	height: 18%;
+	background-color: lightgrey;
+
+	position: relative;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	margin: auto;
+}
+
 .container{
   padding-right: 0px;
   padding-left: 0px;
