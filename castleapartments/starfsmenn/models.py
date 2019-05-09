@@ -1,19 +1,17 @@
 from django.db import models
 
-# Create your models here.
 
-
-class Starfsmadur(models.Model):
-    name = models.CharField(max_length=255)
-    phone = models.IntegerField()
-    email = models.CharField(max_length=255)
-    title = models.CharField(max_length=255)
-    description = models.CharField(max_length=999, blank=True)
+class Starfsmadurmynd(models.Model):
+    mynd = models.CharField(max_length=999)
     def __str__(self):
-        return self.name
+        return self.mynd
 
-class StarfsmadurImage(models.Model):
-    image = models.CharField(max_length=999)
-    starfsmadur = models.ForeignKey(Starfsmadur, on_delete=models.CASCADE)
+class Starfsmenn(models.Model):
+    nafn = models.CharField(max_length=255)
+    simi = models.IntegerField()
+    netfang = models.CharField(max_length=255)
+    starfsheiti = models.CharField(max_length=255)
+    lysing = models.CharField(max_length=999, blank=True)
+    starfsmadurmynd = models.ForeignKey(Starfsmadurmynd, on_delete=models.CASCADE)
     def __str__(self):
-        return self.image
+        return self.nafn
