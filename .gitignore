@@ -145,7 +145,7 @@ dmypy.json
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
-.castleapartments/.idea/**/workspace.xml
+.castleapartments/.idea/workspace.xml
 
 # Generated files
 .idea/**/contentModel.xml
