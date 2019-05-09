@@ -1,4 +1,4 @@
-
+﻿
 # Created by https://www.gitignore.io/api/django,pycharm
 # Edit at https://www.gitignore.io/?templates=django,pycharm
 
@@ -145,6 +145,7 @@ dmypy.json
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+.castleapartments/.idea/**/workspace.xml
 
 # Generated files
 .idea/**/contentModel.xml
