@@ -32,6 +32,13 @@
     width: 10%;
 }
 
+#hreinsa {
+    margin-right: 4%;
+    margin-bottom: 1%;
+    width: 10%;
+    color: red;
+}
+
 .form-control {
     border-radius: 15px;
 }
