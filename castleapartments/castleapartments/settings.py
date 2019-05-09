@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'eignir.apps.EignirConfig',
     'verdmat.apps.VerdmatConfig',
     'forsida.apps.ForsidaConfig',
+    'umokkur.apps.UmokkurConfig',
+    'starfsmenn.apps.StarfsmennConfig',
+    'opinhus.apps.OpinhusConfig',
     'user.apps.UserConfig',
     'starfsmenn.apps.StarfsmennConfig'
 ]
@@ -126,6 +129,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
+
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [

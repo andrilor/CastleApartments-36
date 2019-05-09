@@ -1,3 +1,90 @@
+
+.red {
+    background-color: gray;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.search_bar {
+	width: 90%;
+	height: 18%;
+	background-color: lightgrey;
+    border-radius: 15px;
+
+	position: absolute;
+	top:50%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	margin: auto;
+}
+
+.col-lg-6{
+    top: 25%;
+    width: 100%;
+}
+
+#dd {
+    margin-right: 4%;
+    margin-bottom: 1%;
+    width: 10%;
+}
+
+#hreinsa {
+    margin-right: 4%;
+    margin-bottom: 1%;
+    width: 10%;
+    color: red;
+}
+
+.form-control {
+    border-radius: 15px;
+}
+
+h1 {
+    margin-top: 10%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: center;
+}
+
+.opin-hus-container {
+	width: 90%;
+	height: 18%;
+	background-color: lightgrey;
+
+	position: relative;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	margin: auto;
+}
+
+.container{
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+}
+
+.masthead {
+  height: 100vh;
+  min-height: 500px;
+  background-image: url('/static/images/reykjavik_2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
 html, body {
     max-width: 100%;
     overflow-x: hidden;
@@ -225,3 +312,4 @@ nav li #login-content {
   top: 2px;
   right: 2px;
 }
+
