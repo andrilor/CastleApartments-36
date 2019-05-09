@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'eignir.apps.EignirConfig',
     'verdmat.apps.VerdmatConfig',
+    'forsida.apps.ForsidaConfig',
+    'user.apps.UserConfig',
+    'starfsmenn.apps.StarfsmennConfig'
 ]
 
 MIDDLEWARE = [
@@ -129,3 +132,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
+
+LOGIN_URL = '/user/login'
+LOGIN_REDIRECTED_URL = ''
