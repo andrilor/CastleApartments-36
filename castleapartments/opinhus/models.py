@@ -1,7 +1,11 @@
+from datetime import datetime
+
 from django.db import models
-from eignir.models import Eignir
+from eignir.models import Eign
 
 class opinhus(models.Model):
-    Start = models.DateTimeField()
-    End = models.DateTimeField()
-    eignir = models.ForeignKey(Eignir, on_delete=models.CASCADE)
+    Fra = models.DateTimeField(default=datetime.now, blank=True)
+    til = models.DateTimeField(default=datetime.now, blank=True)
+    eign = models.ForeignKey(Eign, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.Fra and self.til
