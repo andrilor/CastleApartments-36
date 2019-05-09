@@ -1,9 +1,6 @@
 from django.db import models
 
-# Create your models here.
-
-
-class Starfsmadur(models.Model):
+class Starfsmenn(models.Model):
     name = models.CharField(max_length=255)
     phone = models.IntegerField()
     email = models.CharField(max_length=255)
@@ -14,6 +11,6 @@ class Starfsmadur(models.Model):
 
 class StarfsmadurImage(models.Model):
     image = models.CharField(max_length=999)
-    starfsmadur = models.ForeignKey(Starfsmadur, on_delete=models.CASCADE)
+    Starfsmenn = models.ForeignKey(Starfsmenn, on_delete=models.CASCADE)
     def __str__(self):
         return self.image

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'verdmat.apps.VerdmatConfig',
     'forsida.apps.ForsidaConfig',
     'user.apps.UserConfig',
+    'starfsmenn.apps.StarfsmennConfig'
 ]
 
 MIDDLEWARE = [
