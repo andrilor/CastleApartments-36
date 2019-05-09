@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'starfsmenn.apps.StarfsmennConfig',
     'opinhus.apps.OpinhusConfig',
     'user.apps.UserConfig',
-    'starfsmenn.apps.StarfsmennConfig'
 ]
 
 MIDDLEWARE = [
