@@ -1,8 +1,8 @@
 from django.db import models
 from starfsmenn.models import Starfsmenn
 
-class GPSMarker(models.Model):
-    name = models.CharField(max_length=255)
+class GPS_Stadsetning(models.Model):
+    gotuheiti = models.CharField(max_length=255)
     lat = models.FloatField(max_length=(10, 6))
     lng = models.FloatField(max_length=(10, 6))
 
@@ -33,11 +33,12 @@ class Eign(models.Model):
     Elevator = models.BooleanField()
     Garage = models.BooleanField()
     Parking_Space = models.BooleanField()
+
     Seller_Name = models.CharField(max_length=255)
     Seller_Phone = models.IntegerField()
     Seller_Email = models.CharField(max_length=255)
     Starfsmenn = models.ForeignKey(Starfsmenn, on_delete=models.CASCADE)
-    Marker = models.ForeignKey(GPSMarker, on_delete=models.CASCADE)
+    GPS_Stadsetning = models.ForeignKey(GPS_Stadsetning, on_delete=models.CASCADE)
 
 class EignImage(models.Model):
     image = models.CharField(max_length=999)

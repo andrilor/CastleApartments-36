@@ -1,16 +1,17 @@
 from django.db import models
 
-class Starfsmenn(models.Model):
-    name = models.CharField(max_length=255)
-    phone = models.IntegerField()
-    email = models.CharField(max_length=255)
-    title = models.CharField(max_length=255)
-    description = models.CharField(max_length=999, blank=True)
-    def __str__(self):
-        return self.name
 
-class StarfsmadurImage(models.Model):
-    image = models.CharField(max_length=999)
-    Starfsmenn = models.ForeignKey(Starfsmenn, on_delete=models.CASCADE)
+class Starfsmadurmynd(models.Model):
+    mynd = models.CharField(max_length=999)
     def __str__(self):
-        return self.image
+        return self.mynd
+
+class Starfsmenn(models.Model):
+    nafn = models.CharField(max_length=255)
+    simi = models.IntegerField()
+    netfang = models.CharField(max_length=255)
+    starfsheiti = models.CharField(max_length=255)
+    lysing = models.CharField(max_length=999, blank=True)
+    starfsmadurmynd = models.ForeignKey(Starfsmadurmynd, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.nafn
