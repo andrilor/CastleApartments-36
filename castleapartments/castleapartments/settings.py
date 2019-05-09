@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'eignir.apps.EignirConfig',
     'verdmat.apps.VerdmatConfig',
     'forsida.apps.ForsidaConfig',
+    'umokkur.apps.UmokkurConfig',
+    'starfsmenn.apps.StarfsmennConfig',
+    'opinhus.apps.OpinhusConfig',
     'user.apps.UserConfig',
     'starfsmenn.apps.StarfsmennConfig'
 ]
