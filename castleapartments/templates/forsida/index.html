@@ -1,7 +1,61 @@
 {% extends 'base.html' %}
-
 {% block content %}
+{% load static from staticfiles %}
 
-<h3> Þetta er forsíðan </h3>
+<!-- Full Page Image Header with Vertically Centered Content -->
+<header class="masthead">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="search_bar">
+        <div class="col-lg-6">
+            <div class="dd-group">
+                <button class="btn btn-secondary dropdown-toggle" id="dd" type="button">Svæði</button>
+                <button class="btn btn-secondary dropdown-toggle" id="dd" type="button">Tegund</button>
+                <button class="btn btn-secondary dropdown-toggle" id="dd" type="button">Stærð</button>
+                <button class="btn btn-secondary dropdown-toggle" id="dd" type="button">Verð</button>
+                <button class="btn btn-secondary dropdown-toggle" id="dd" type="button">Herbergi</button>
+                <button class="btn btn-secondary dropdown-toggle" id="dd" type="button">Annað</button>
+                <button class="btn btn-default" id="hreinsa" type="button">Hreinsa</button>
+            </div>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Stimplið inn götuheiti...">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Leita</button>
+              </span>
+            </div><!-- /input-group -->
+          </div><!-- /.col-lg-6 -->
+      </div>
+    </div>
+  </div>
+</header>
+<body>
+<section class="py-5">
+  <div class="container">
+    <h1 class="font-weight-light">Opin hús á næstunni</h1>
+    <div class="opin-hus-container">
+        <p>hello</p>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <h1 class="font-weight-light">Nýlegar eignir</h1>
+    <div class="opin-hus-container">
+        <p>hello</p>
+    </div>
+  </div>
+</section>
+</body>
+
+<section class="py-5">
+  <div class="container">
+    <h1 class="font-weight-light">Starfsmenn</h1>
+    <div class="opin-hus-container">
+        <p>hello</p>
+    </div>
+  </div>
+</section>
+</body>
 
 {% endblock %}
