@@ -1,25 +1,28 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h2>Innskráning</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="text" class="form-control" placeholder="Notendanafn">
-        <input type="password" class="form-control" placeholder="Lykilorð">
+    <div class = "center">
+        <h2>Innskráning</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <!--
+            <input type="text" class="form-control" placeholder="Notendanafn">
+            <input type="password" class="form-control" placeholder="Lykilorð">
 
+            -->
 
-        <button type="submit">Skrá inn</button>
+            <button type="submit">Skrá inn</button>
 
-    <div class="card-footer">
-        <div class="d-flex justify-content-center links">
-            Ert ekki með aðgang?<a href="#">Nýskrá </a>
-        </div>
+        <div class="card-footer">
+            <div class="d-flex justify-content-center links">
+                Ertu ekki með aðgang? <a href="{% url 'register' %}">Nýskrá </a>
+            </div>
 
-        <div class="d-flex justify-content-center">
-            <a href="#">Gleymt lykilorð?</a>
+            <div class="d-flex justify-content-center">
+                <a href="#">Gleymt lykilorð?</a>
+            </div>
         </div>
     </div>
-
 
 
 

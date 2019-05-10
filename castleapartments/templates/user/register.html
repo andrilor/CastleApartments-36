@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-
-    <form class = "form form-horizontal" method="post">
-        {% csrf_token %}
-        {{ form }}
-        <input type="submit" class="btn btn-primary" value="Nýskrá" />
-    </form>>
+    <div class = "center">
+        <form class = "form form-horizontal" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" class="btn btn-primary" value="Nýskrá" />
+        </form>
+    </div>
 
 {% endblock %}
 
