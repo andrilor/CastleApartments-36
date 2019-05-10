@@ -8,8 +8,8 @@ class ProfileForm(ModelForm):
         exclude = ['id', 'user']
         widgets = {
             'netfang':widgets.EmailInput(attrs={'class': 'form-control'}),
-            'nafn':widgets.TextInput(attrs={'class': 'form-control'}),
-            'eftirnafn': widgets.TextInput(attrs={'class': 'form-control'}),
+            'fullt_nafn':widgets.TextInput(attrs={'class': 'form-control'}),
+            'heimilisfang': widgets.TextInput(attrs={'class': 'form-control'}),
             'simi':widgets.TextInput(attrs={'class': 'form-control'}),
             'profile_mynd':widgets.TextInput(attrs={'class': 'form-control'}),
         }
