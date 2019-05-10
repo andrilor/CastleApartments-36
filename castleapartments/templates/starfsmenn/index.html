@@ -5,7 +5,7 @@
 <h3> Hér kemur listi af starfsmönnum </h3>
 <div class="starfsmenn">
     {% for starfsmadur in starfsmenn %}
-    {% include 'starfsmenn/starfsmadur.html' with starfsmenn=starfsmenn %}
+        {% include 'starfsmenn/starfsmadur.html' with starfsmadur=starfsmadur %}
     {% endfor %}
 {% endblock %}
 </div>

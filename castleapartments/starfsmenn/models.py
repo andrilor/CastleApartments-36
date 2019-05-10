@@ -1,6 +1,5 @@
 from django.db import models
 
-
 class Starfsmadurmynd(models.Model):
     mynd = models.CharField(max_length=999)
     def __str__(self):
