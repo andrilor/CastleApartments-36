@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'starfsmenn.apps.StarfsmennConfig',
     'opinhus.apps.OpinhusConfig',
     'user.apps.UserConfig',
+    'pantanir.apps.PantanirConfig'
 ]
 
 MIDDLEWARE = [
