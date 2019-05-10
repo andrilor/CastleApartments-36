@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'starfsmenn.apps.StarfsmennConfig',
     'opinhus.apps.OpinhusConfig',
     'user.apps.UserConfig',
+    'mittsvaedi.apps.MittsvaediConfig',
     'pantanir.apps.PantanirConfig'
 ]
 
@@ -137,4 +138,4 @@ STATICFILES_DIRS = [
 ]
 
 LOGIN_URL = '/user/login'
-LOGIN_REDIRECT_URL = '/user/profile'
+LOGIN_REDIRECT_URL = '/mittsvaedi'
