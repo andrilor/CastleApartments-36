@@ -1,13 +1,6 @@
 from django.db import models
 from starfsmenn.models import Starfsmenn
 
-class GPS_Stadsetning(models.Model):
-    heimilisfang = models.CharField(max_length=255)
-    lat = models.FloatField(max_length=(10, 6))
-    lng = models.FloatField(max_length=(10, 6))
-    def __str__(self):
-        return self.lat and self.lat
-
 class Eign(models.Model):
     heimilisfang = models.CharField(max_length=255)
     baejarfelag = models.CharField(max_length=255)
@@ -39,13 +32,21 @@ class Eign(models.Model):
     simi_seljanda = models.IntegerField()
     netfang_seljanda = models.CharField(max_length=255)
     starfsmenn = models.ForeignKey(Starfsmenn, on_delete=models.CASCADE)
-    gps_stadsetning = models.ForeignKey(GPS_Stadsetning, on_delete=models.CASCADE)
     def __str__(self):
         return self.heimilisfang
+
+class GPS_Stadsetning(models.Model):
+    heimilisfang = models.CharField(max_length=255)
+    lat = models.FloatField(max_length=(10, 6))
+    lng = models.FloatField(max_length=(10, 6))
+    eign = models.ForeignKey(Eign, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.lat and self.lat
 
 class Eignmynd(models.Model):
     mynd = models.CharField(max_length=999)
     eign = models.ForeignKey(Eign, on_delete=models.CASCADE)
+    inorder = models.IntegerField()
     def __str__(self):
         return self.mynd
 

@@ -1,8 +1,9 @@
-<div class="well starfsmadur">
-    <a href="#">
-        <!--myndir ekki til en þarf að breyta hosting svo það virki-->
-        <img class = "Starfsmenn-img" scr="{{ starfsmadur.Starfsmadurmynd_set.first.image }}" />
+<div class="well-starfsmadur">
+    <a href="/starfsmenn/{{ starfsmadur.id }}">
+        <img class="Starfsmenn-img" src="{{ starfsmadur.starfsmadurmynd_set.first.mynd }}" />
         <h4>{{ starfsmadur.nafn }}</h4>
-        <p>{{ starfsmadur.lysing }}</p>
+        <p>{{ starfsmadur.simi }}</p>
+        <p>{{ starfsmadur.netfang }}</p>
+        <p>{{ starfsmadur.starfsheiti }}</p>
     </a>
 </div>

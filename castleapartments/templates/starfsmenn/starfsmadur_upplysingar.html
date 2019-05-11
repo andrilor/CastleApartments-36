@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>{{ starfsmenn.nafn }}</h1>
+    <img class="Starfsmenn-img" src="{{ starfsmenn.starfsmadurmynd_set.first.mynd }}" />
+    <p>{{ starfsmenn.simi }}</p>
+    <p>{{ starfsmenn.netfang }}</p>
+    <p>{{ starfsmenn.starfsheiti }}</p>
+    <p>{{ starfsmenn.lysing }}</p>
+{% endblock %}
