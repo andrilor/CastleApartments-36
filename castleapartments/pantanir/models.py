@@ -8,3 +8,6 @@ class Pantanir(models.Model):
     kortanumer = models.CharField(max_length=19)
     dagsetning_manudur = models.IntegerField()
     dagsetning_ar = models.IntegerField()
+
+    def __str__(self):
+        return self.notandanafn
