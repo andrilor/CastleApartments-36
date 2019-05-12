@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'opinhus.apps.OpinhusConfig',
     'user.apps.UserConfig',
     'mittsvaedi.apps.MittsvaediConfig',
-    'pantanir.apps.PantanirConfig'
+    'pantanir.apps.PantanirConfig',
 ]
 
 MIDDLEWARE = [
