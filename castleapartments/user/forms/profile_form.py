@@ -11,6 +11,5 @@ class ProfileForm(ModelForm):
             'fullt_nafn':widgets.TextInput(attrs={'class': 'form-control'}),
             'heimilisfang': widgets.TextInput(attrs={'class': 'form-control'}),
             'simi':widgets.TextInput(attrs={'class': 'form-control'}),
-            'profile_mynd':widgets.TextInput(attrs={'class': 'form-control'}),
         }
 

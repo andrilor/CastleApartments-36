@@ -7,4 +7,3 @@ class Profile(models.Model):
     fullt_nafn = models.CharField(max_length=255)
     heimilisfang = models.CharField(max_length=255)
     simi = models.IntegerField()
-    profile_mynd = models.CharField(max_length=9999)
