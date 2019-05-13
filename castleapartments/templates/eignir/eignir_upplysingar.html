@@ -15,32 +15,32 @@
 
     <!-- -->
 
-    {% if eign.laust_nuna is not 'false' %}
+    {% if eign.laust_nuna %}
         <p>Laus strax</p>
     {% endif %}
-    {% if eign.gardur is not 'false' %}
+    {% if eign.gardur %}
         <p>Gaður</p>
     {% endif %}
-    {% if eign.serinngangur is not 'false' %}
+    {% if eign.serinngangur %}
         <p>Inngangur: Sérinngangur</p>
     {% endif %}
-    {% if eign.sameigninlegur_inngangur is not 'false' %}
+    {% if eign.sameigninlegur_inngangur %}
         <p>Inngangur: Sameigninlegur inngangur</p>
     {% endif %}
-    {% if eign.solpallur is not 'false' %}
+    {% if eign.solpallur %}
         <p>Sólpallur</p>
     {% endif %}
-    {% if eign.svalir is not 'false' %}
+    {% if eign.svalir %}
         <p>Svalir</p>
     {% endif %}
-    {% if eign.hjolastolaadgengi is not 'false' %}
+    {% if eign.hjolastolaadgengi %}
         <p>Hjólastolaaðgengi</p>
     {% endif %}
-    {% if eign.lyfta is not 'false' %}
+    {% if eign.lyfta %}
         <p>Lyfta</p>
     {% endif %}
-    {% if eign.bilskur is not eign.bilskur.filter() %}
-        <p>Bílskur</p>
+    {% if eign.bilskur %}
+        <p>Bílskúr</p>
     {% endif %}
 
     <!-- -->
