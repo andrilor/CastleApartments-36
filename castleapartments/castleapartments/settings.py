@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'user.apps.UserConfig',
     'mittsvaedi.apps.MittsvaediConfig',
     'pantanir.apps.PantanirConfig',
+    'leitarsaga.apps.LeitarsagaConfig',
 ]
 
 MIDDLEWARE = [
