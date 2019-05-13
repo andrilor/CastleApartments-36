@@ -20,8 +20,6 @@
 
     z-index: 2;
 
-    overflow: hidden;
-
 	margin: auto;
 }
 
@@ -78,6 +76,18 @@ h1 {
     margin-top: 5%;
     border: 1px black;
     border-style: solid;
+    width: 30em;
+}
+
+.well-eign {
+    display: inline-block;
+    margin-right: 40px;
+    margin-left: 10px;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    border: 1px black;
+    border-style: solid;
+    width: 30em;
 }
 
 .opin-hus-container .well-starfsmadur {
@@ -91,9 +101,25 @@ h1 {
     background-color: white;
 }
 
+.well-starfsmadur {
+    display: inline-block;
+    margin-right: 40px;
+    margin-left: 10px;
+    margin-top: 2em;
+    border: 1px black;
+    border-style: solid;
+    width: 20em;
+    background-color: white;
+}
+
+.Starfsmenn-img {
+    height: 20em;
+    width: 100%;
+}
+
 .opin-hus-container .well-eign .eign-img{
-    height: 10px;
-    width: 50px;
+    height: 20em;
+    width: 100%;
 }
 
 .opin-hus-container .well-starfsmadur .Starfsmenn-img{
