@@ -8,5 +8,5 @@ class Leitarsaga(models.Model):
     eign = models.ForeignKey(Eign, on_delete=models.CASCADE, related_name='Leitarsaga_eign')  # CASCADE for the time being.
     time_stamp = models.DateTimeField(default=timezone.now)
 
-    def __str__(self):
+    def __int__(self):
         return self.notandanafn
