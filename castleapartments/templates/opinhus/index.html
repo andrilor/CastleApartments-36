@@ -2,10 +2,11 @@
 
 {% block content %}
 
-<div>
-
-    <h3> Hér kemur listi af opnum húsum </h3>
-
+<h3> Hér kemur listi af eignum </h3>
+<div class="opinhus">
+    {% for opidhus in opinhus %}
+        {% include 'opinhus/opinhus.html' with opidhus=opidhus %}
+    {% endfor %}
 </div>
 
 {% endblock %}

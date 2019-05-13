@@ -7,5 +7,5 @@ class opinhus(models.Model):
     fra = models.DateTimeField(default=datetime.now, blank=True)
     til = models.DateTimeField(default=datetime.now, blank=True)
     eign = models.ForeignKey(Eign, on_delete=models.CASCADE)
-    def __str__(self):
-        return self.Fra and self.til
+    def __int__(self):
+        return self.fra and self.til
