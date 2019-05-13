@@ -5,8 +5,21 @@
 <div class="center">
     <h3> Þetta er profile síðan</h3>
 
+    {% if user.is_authenticated %}
+
+        <div class="well-profile">
+            <img class="profile-img" src="{{ profile.profile_mynd_set.first.mynd }}" />
+            <h4>{{ user.profile.fullt_nafn }}</h4>
+            <p>Netfang: {{ user.profile.netfang }}</p>
+            <p>Heimilisfang: {{ user.profile.heimilisfang }}</p>
+            <p>Sími: {{ user.profile.simi }}</p>
+        </div>
+
+    {% endif %}
+
     <a href="{% url 'profile' %}">Breyta upplýsingum</a>
 
 </div>
+
 
 {% endblock %}
