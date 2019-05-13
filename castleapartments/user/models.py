@@ -10,7 +10,6 @@ class Profile(models.Model):
     simi = models.IntegerField()
     mynd = models.CharField(max_length=9999)
 
-
 class leitarsaga(models.Model):
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
     eign = models.ForeignKey(Eign, on_delete=models.CASCADE)

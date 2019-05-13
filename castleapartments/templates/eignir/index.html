@@ -4,7 +4,10 @@
 
 <h3> Hér kemur listi af eignum </h3>
 <div class="eignir">
-
+    {% for eign in eignir %}
+        {% include 'eignir/eign.html' with eign=eign %}
+    {% endfor %}
 </div>
 
 {% endblock %}
+
