@@ -47,6 +47,7 @@ h1 {
     margin-left: 0px;
     margin-right: 0px;
     text-align: center;
+    font-family: 'Martel', serif;
 }
 
 .opin-hus-container {
@@ -140,6 +141,7 @@ h1 {
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .dropbtn {
