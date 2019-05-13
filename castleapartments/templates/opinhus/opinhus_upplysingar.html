@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>{{ opidhus.eign.heimilisfang }}   {{ opidhus.eign.postnumer }} {{ opidhus.eign.baejarfelag }}</h1>
+    <img class="" src="{{ opidhus.eign.eignmynd_set.first.mynd }}" />
+    <h1>Opiðhús:  frá:{{ opidhus.fra }} - Til:{{ opidhus.til }}</h1>
+    <h4>Verð: {{ opidhus.eign.verd }}Kr.</h4>
+    <p>Brunabotamat: {{ opidhus.eign.brunabotamat }}</p>
+    <p>Fasteignamat: {{ opidhus.eign.fasteignamat }}</p>
+    <p>{{ opidhus.eign.tegund }}</p>
+    <p>Lýsing: {{ opidhus.eign.lysing }}</p>
+    <p>Stærd: {{ opidhus.eign.staerd }} fm</p>
+    <p>Byggingarar: {{ opidhus.eign.byggingarar }}</p>
+    <p>Herbergi: {{ opidhus.eign.fjoldi_herbergja }}</p>
+    <p>Baðherbergi: {{ opidhus.eign.fjoldi_badherberga }}</p>
+    <p>Svefnherbergi: {{ opidhus.eign.fjoldi_svefnherberga }}</p>
+
+    <!-- -->
+
+    {% if opidhus.eign.laust_nuna is not 'false' %}
+        <p>Laus strax</p>
+    {% endif %}
+    {% if opidhus.eign.gardur is not 'false' %}
+        <p>Gaður</p>
+    {% endif %}
+    {% if opidhus.eign.serinngangur is not 'false' %}
+        <p>Inngangur: Sérinngangur</p>
+    {% endif %}
+    {% if opidhus.eign.sameigninlegur_inngangur is not 'false' %}
+        <p>Inngangur: Sameigninlegur inngangur</p>
+    {% endif %}
+    {% if opidhus.eign.solpallur is not 'false' %}
+        <p>Sólpallur</p>
+    {% endif %}
+    {% if opidhus.eign.svalir is not 'false' %}
+        <p>Svalir</p>
+    {% endif %}
+    {% if opidhus.eign.hjolastolaadgengi is not 'false' %}
+        <p>Hjólastolaaðgengi</p>
+    {% endif %}
+    {% if opidhus.eign.lyfta is not 'false' %}
+        <p>Lyfta</p>
+    {% endif %}
+    {% if opidhus.eign.bilskur is not 'false' %}
+        <p>Bílskur</p>
+    {% endif %}
+
+    <!-- -->
+
+    {% for eignmynd in opidhus.eign.eignmynd_set.all %}
+        <img src="{{ eignmynd.mynd }}" class="eign-img" />
+    {% endfor %}
+{% endblock %}
