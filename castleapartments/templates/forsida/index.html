@@ -111,7 +111,11 @@
   <div class="container">
     <h1 class="font-weight-light">Opin hús á næstunni</h1>
     <div class="opin-hus-container">
-        <p>hello</p>
+       <div class="eignir">
+            {% for eign in eignir %}
+                {% include 'eignir/eign.html' with eign=eign %}
+            {% endfor %}
+       </div>
     </div>
   </div>
 </section>
@@ -120,7 +124,11 @@
   <div class="container">
     <h1 class="font-weight-light">Nýlegar eignir</h1>
     <div class="opin-hus-container">
-        <p>hello</p>
+       <div class="eignir">
+            {% for eign in eignir %}
+                {% include 'eignir/eign.html' with eign=eign %}
+            {% endfor %}
+       </div>
     </div>
   </div>
 </section>
@@ -130,7 +138,11 @@
   <div class="container">
     <h1 class="font-weight-light">Starfsmenn</h1>
     <div class="opin-hus-container">
-        <p>hello</p>
+        <div class="starfsmenn">
+            {% for starfsmadur in starfsmenn %}
+                {% include 'starfsmenn/starfsmadur.html' with starfsmadur=starfsmadur %}
+            {% endfor %}
+        </div>
     </div>
   </div>
 </section>
