@@ -46,7 +46,6 @@ class GPS_Stadsetning(models.Model):
 class Eignmynd(models.Model):
     mynd = models.CharField(max_length=999)
     eign = models.ForeignKey(Eign, on_delete=models.CASCADE)
-    inorder = models.IntegerField()
     def __str__(self):
         return self.mynd
 
