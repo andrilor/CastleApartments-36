@@ -47,20 +47,119 @@ h1 {
     margin-left: 0px;
     margin-right: 0px;
     text-align: center;
+    font-family: 'Martel', serif;
 }
 
 .opin-hus-container {
-	width: 90%;
-	height: 18%;
-	background-color: lightgrey;
+    width: 100em;
+	height: 35em;
+    background-color: lightgrey;
 
-	position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    margin: auto;
+
+    position: relative;
     top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
-	margin: auto;
+    text-align: center;
+}
+
+.opin-hus-container .well-eign {
+    display: inline-block;
+    margin-right: 40px;
+    margin-left: 10px;
+    margin-top: 5%;
+    border: 1px black;
+    border-style: solid;
+    width: 30em;
+    background-color: white;
+}
+
+.well-eign {
+    display: inline-block;
+    margin-right: 40px;
+    margin-left: 10px;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    border: 1px black;
+    border-style: solid;
+    width: 30em;
+}
+
+.opin-hus-container .well-starfsmadur {
+    display: inline-block;
+    margin-right: 40px;
+    margin-left: 10px;
+    margin-top: 2em;
+    border: 1px black;
+    border-style: solid;
+    width: 20em;
+    background-color: white;
+}
+
+.starfsmenn {
+    background-color: lightgrey;
+
+    width: 90%;
+
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.well-starfsmadur {
+    display: inline-block;
+    margin-right: 40px;
+    margin-left: 10px;
+    margin-top: 2em;
+    border: 1px black;
+    border-style: solid;
+    width: 20em;
+    background-color: white;
+}
+
+.Starfsmenn-img {
+    height: 20em;
+    width: 100%;
+}
+
+.eign-img {
+    height: 20em;
+    width: 100%;
+}
+
+.opin-hus-container .well-eign .eign-img{
+    height: 20em;
+    width: 100%;
+}
+
+.opin-hus-container .well-starfsmadur .Starfsmenn-img{
+    height: 20em;
+    width: 100%;
+}
+
+.nylegar-eignir-container {
+    width: 90%;
+	height: 18%;
+    background-color: lightgrey;
+
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+
 }
 
 .container{
@@ -68,6 +167,7 @@ h1 {
   padding-left: 0px;
   margin-left: 0px;
   margin-right: 0px;
+
   padding-bottom:50px;
   width: 100%;
 }
@@ -90,6 +190,7 @@ h1 {
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .dropbtn {
@@ -339,6 +440,7 @@ nav li #login-content {
 
 
 .h1 {
+    font-family: 'Martel', serif;
     margin-top: 5%;
 }
 

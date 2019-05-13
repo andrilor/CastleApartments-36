@@ -23,15 +23,8 @@ class Migration(migrations.Migration):
                 ('fullt_nafn', models.CharField(max_length=255)),
                 ('heimilisfang', models.CharField(max_length=255)),
                 ('simi', models.IntegerField()),
-                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
-            ],
-        ),
-        migrations.CreateModel(
-            name='Profile_mynd',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('mynd', models.CharField(max_length=9999)),
-                ('profile', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='user.Profile')),
+                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
         ),
         migrations.CreateModel(
