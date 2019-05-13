@@ -9,11 +9,9 @@ class Profile(models.Model):
     heimilisfang = models.CharField(max_length=255)
     simi = models.IntegerField()
 
-
 class Profile_mynd(models.Model):
     mynd = models.CharField(max_length=9999)
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
-
 
 class leitarsaga(models.Model):
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE)

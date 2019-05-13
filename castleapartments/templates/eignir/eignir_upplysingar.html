@@ -39,7 +39,7 @@
     {% if eign.lyfta is not 'false' %}
         <p>Lyfta</p>
     {% endif %}
-    {% if eign.bilskur is not 'false' %}
+    {% if eign.bilskur is not eign.bilskur.filter() %}
         <p>Bílskur</p>
     {% endif %}
 
