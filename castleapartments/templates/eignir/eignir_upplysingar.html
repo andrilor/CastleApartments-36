@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     <h1>{{ eign.heimilisfang }}   {{ eign.postnumer }} {{ eign.baejarfelag }}</h1>
+    <img class="" src="{{ eign.eignmynd_set.first.mynd }}" />
     <h4>Verð: {{ eign.verd }}Kr.</h4>
     <p>Brunabotamat: {{ eign.brunabotamat }}</p>
     <p>Fasteignamat: {{ eign.fasteignamat }}</p>
@@ -38,7 +39,7 @@
     {% if eign.lyfta is not 'false' %}
         <p>Lyfta</p>
     {% endif %}
-    {% if eign.bilskur is not 'false' %}
+    {% if eign.bilskur is not eign.bilskur.filter() %}
         <p>Bílskur</p>
     {% endif %}
 
