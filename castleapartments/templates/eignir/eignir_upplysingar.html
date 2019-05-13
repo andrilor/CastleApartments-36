@@ -18,6 +18,9 @@
     {% if eign.laust_nuna is not 'false' %}
         <p>Laus strax</p>
     {% endif %}
+    {% if opidhus %}
+        <p>Opið hús frá {{ opidhus.fra }} til {{ opidhus.til }}</p>
+    {% endif %}
     {% if eign.gardur is not 'false' %}
         <p>Gaður</p>
     {% endif %}
