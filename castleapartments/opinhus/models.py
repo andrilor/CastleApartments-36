@@ -8,4 +8,4 @@ class opinhus(models.Model):
     til = models.DateTimeField(default=datetime.now, blank=True)
     eign = models.ForeignKey(Eign, on_delete=models.CASCADE)
     def __str__(self):
-        return self.Fra and self.til
+        return str(self.fra)
