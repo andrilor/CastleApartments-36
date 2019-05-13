@@ -1,7 +1,9 @@
-<div class="well starfsmadur">
-    <a href="#">
-        <img class = "Starfsmenn-img" scr="{{ Starfsmenn.Starfsmadurmynd_set.first.image }}" />
-        <h4>{{ Starfsmenn.nafn }}</h4>
-        <p>{{ Starfsmenn.lysing }}</p>
+<div class="well-starfsmadur">
+    <a href="/starfsmenn/{{ starfsmadur.id }}">
+        <img class="Starfsmenn-img" src="{{ starfsmadur.starfsmadurmynd_set.first.mynd }}" />
+        <h4>{{ starfsmadur.nafn }}</h4>
+        <p>{{ starfsmadur.simi }}</p>
+        <p>{{ starfsmadur.netfang }}</p>
+        <p>{{ starfsmadur.starfsheiti }}</p>
     </a>
 </div>
