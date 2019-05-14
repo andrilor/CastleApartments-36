@@ -6,7 +6,7 @@ from eignir.models import Eign
 class opinhus(models.Model):
     fra = models.DateTimeField(default=datetime.now, blank=True)
     til = models.DateTimeField(default=datetime.now, blank=True)
-    eign = models.ForeignKey(Eign, on_delete=models.CASCADE)
+    eign = models.ForeignKey(Eign, on_delete=models.CASCADE, related_name='er_opid')
 
     def __str__(self):
         return str(self.fra)

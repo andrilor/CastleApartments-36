@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name = "index-eignir"),
-    path('<int:id>', views.get_eign_by_id, name="eignir")
+    path('<int:id>', views.uppl_um_eign, name="eignir")
 ]

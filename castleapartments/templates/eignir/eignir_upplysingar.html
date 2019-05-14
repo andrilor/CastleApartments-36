@@ -2,6 +2,9 @@
 {% block content %}
     <h1>{{ eign.heimilisfang }}   {{ eign.postnumer }} {{ eign.baejarfelag }}</h1>
     <img class="" src="{{ eign.eignmynd_set.first.mynd }}" />
+    {% if eign in er_opid %}
+        <h1>Opiðhús:  frá:{{ opidhus.fra }} - Til:{{ opidhus.til }}</h1>
+    {% endif %}
     <h4>Verð: {{ eign.verd }}Kr.</h4>
     <p>Brunabotamat: {{ eign.brunabotamat }}</p>
     <p>Fasteignamat: {{ eign.fasteignamat }}</p>
@@ -17,9 +20,6 @@
 
     {% if eign.laust_nuna %}
         <p>Laus strax</p>
-    {% endif %}
-    {% if opidhus %}
-        <p>Opið hús frá {{ opidhus.fra }} til {{ opidhus.til }}</p>
     {% endif %}
     {% if eign.gardur %}
         <p>Gaður</p>
