@@ -1,7 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
     <h1>{{ eign.heimilisfang }}   {{ eign.postnumer }} {{ eign.baejarfelag }}</h1>
-    <img class="" src="{{ eign.eignmynd_set.first.mynd }}"/>
+    <img class="" src="{{ eign.eignmynd_set.first.mynd }}" />
+    <!-- Check if eign is a foreign key in the opinhus table -->
+    {% if eign.er_opid.exists %}
+        <!-- If it is... show information about the open house -->
+        <h1>Opiðhús:  frá:{{ opidhus.first.fra }} - Til:{{ opidhus.first.til }}</h1>
+    {% endif %}
     <h4>Verð: {{ eign.verd }}Kr.</h4>
     <p>Brunabotamat: {{ eign.brunabotamat }}</p>
     <p>Fasteignamat: {{ eign.fasteignamat }}</p>
