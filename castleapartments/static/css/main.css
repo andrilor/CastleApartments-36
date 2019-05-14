@@ -6,6 +6,18 @@
 .navbar-fixed-bottom {
     background-color: #D9C1B4;
 }
+.navbar-brand{
+    padding: 0px;
+    margin-left: 5px;
+}
+.navbar-brand img{
+    height: auto;
+    max-height: -webkit-fill-available;
+}
+
+.nav {
+    padding-bottom: 5px;
+}
 .search_bar {
 	width: 90%;
 	height: 18%;
