@@ -4,8 +4,12 @@
 
 .navbar {
     margin-bottom: 0px;
+    background-color: #FCF7F5;
+    background-image: none;
 }
-
+.navbar-fixed-bottom {
+    background-color: #D9C1B4;
+}
 .search_bar {
 	width: 90%;
 	height: 18%;
@@ -191,6 +195,7 @@ html, body {
     max-width: 100%;
     overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
+    background-color: #FCF7F5;
 }
 
 .dropbtn {
