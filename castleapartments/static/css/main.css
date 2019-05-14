@@ -15,9 +15,26 @@
     max-height: -webkit-fill-available;
 }
 
-.nav {
-    padding-bottom: 5px;
+.navbar-nav{
+    padding: 5px;
 }
+
+.nav>li:hover {
+    background-color: #A7C1D9;
+}
+
+.carousel-inner img{
+    margin: auto;
+    width: 100%;
+}
+
+carousel-control .glyphicon-chevron-left{
+    position: absolute;
+    left: 50%;
+    top: 15%;
+
+}
+
 .search_bar {
 	width: 90%;
 	height: 18%;
