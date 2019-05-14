@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     <h1>{{ opidhus.eign.heimilisfang }}   {{ opidhus.eign.postnumer }} {{ opidhus.eign.baejarfelag }}</h1>
-    <img class="" src="{{ opidhus.eign.eignmynd_set.first.mynd }}" />
+    <img src="https://i.imgur.com/{{ opidhus.eign.eignmynd_set.first.mynd }}.jpg"/>
     <h1>Opiðhús:  frá:{{ opidhus.fra }} - Til:{{ opidhus.til }}</h1>
     <h4>Verð: {{ opidhus.eign.verd }}Kr.</h4>
     <p>Brunabotamat: {{ opidhus.eign.brunabotamat }}</p>
@@ -47,6 +47,6 @@
     <!-- -->
 
     {% for eignmynd in opidhus.eign.eignmynd_set.all %}
-        <img src="{{ eignmynd.mynd }}" class="eign-img" />
+        <img src="https://i.imgur.com/{{ eignmynd.mynd }}.jpg"/>
     {% endfor %}
 {% endblock %}
