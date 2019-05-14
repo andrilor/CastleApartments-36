@@ -6,7 +6,7 @@
     <h3> Þetta er profile síðan</h3>
 
     {% if user.is_authenticated %}
-        <div class="well-profile">
+        <div class="profile">
             <img class="profile-img" src="{{ user.profile.mynd }}" />
             <h4>Nafn: {{ user.profile.fullt_nafn }}</h4>
             <p>Heimilisfang: {{ user.profile.heimilisfang }}</p>
