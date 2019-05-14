@@ -46,17 +46,56 @@ h1 {
 }
 
 .opin-hus-container {
-	width: 90%;
-	height: 18%;
-	background-color: lightgrey;
+    width: 100em;
+	height: 25em;
+    background-color: lightgrey;
 
-	position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    margin: auto;
+
+    position: relative;
     top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 
-	margin: auto;
+.opin-hus-container .well-eign {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.opin-hus-container .well-starfsmadur {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.opin-hus-container .well-eign .eign-img{
+    height: 50px;
+    width: 50px;
+}
+
+.opin-hus-container .well-starfsmadur .Starfsmenn-img{
+    height: 50px;
+    width: 50px;
+}
+
+.nylegar-eignir-container {
+    width: 90%;
+	height: 18%;
+    background-color: lightgrey;
+
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+
 }
 
 .container{
@@ -64,6 +103,7 @@ h1 {
   padding-left: 0px;
   margin-left: 0px;
   margin-right: 0px;
+
   padding-bottom:50px;
   width: 100%;
 }
