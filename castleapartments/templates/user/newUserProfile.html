@@ -1,0 +1,19 @@
+{% extends 'user/newUser.html' %}
+{% block content %}
+<div class="center">
+    <h3> Þetta er profile síðan</h3>
+
+    {% if user.is_authenticated %}
+        <div class="profile">
+            <img class="profile-img" src="{{ user.profile.mynd }}" />
+            <h4>Nafn: {{ user.profile.fullt_nafn }}</h4>
+            <p>Heimilisfang: {{ user.profile.heimilisfang }}</p>
+            <p>Sími: {{ user.profile.simi }}</p>
+            <p>Netfang: {{ user.profile.netfang }}</p>
+        </div>
+
+    {% endif %}
+    <a href="{% url 'newUserUpplysingar' %}" class="btn btn-primary">Halda árfam</a>
+    <a href="" class="btn btn-primary">Hætta við</a>
+</div>
+{% endblock %}
