@@ -8,7 +8,7 @@ def index(request):
 
 def uppl_um_eign(request, id):
     eign = get_object_or_404(Eign, pk=id)
-    opidhus = opinhus.objects.get(eign=eign)
+    opidhus = opinhus.objects.filter(eign=eign)
     return render(request, 'eignir/eignir_upplysingar.html', {
         'eign': eign, 'opidhus': opidhus
     })
