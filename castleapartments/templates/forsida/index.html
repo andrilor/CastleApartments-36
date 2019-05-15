@@ -4,105 +4,61 @@
 
 <!-- Full Page Image Header with Vertically Centered Content -->
 <header class="masthead">
+
   <div class="container h-100">
+
     <div class="row h-100 align-items-center">
-      <div class="search_bar">
-        <div class="col-lg-6">
-            <div class="dd-group">
-                <li class="dropdown">
-                <button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" id="dd" type="button" aria-expanded="false">Svæði</button>
-                  <div class="dropdown-content">
-                        <label class="container">Reykjavík
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container">Kópavogur
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container">Akranes
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container">Selfoss
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                  </div>
-                </li>
-                <li class="dropdown">
-                <button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" id="dd" type="button" aria-expanded="false">Tegund</button>
-                  <div class="dropdown-content">
-                    <label class="container">Einbýli
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Fjölbýli
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Raðhús
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </li>
-                <li class="dropdown">
-                <button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" id="dd" type="button" aria-expanded="false">Stærð</button>
-                  <div class="dropdown-content">
-                      <form action="/action_page.php">
-                        Frá: <input type="text" name="s_from"><br>
-                        Til: <input type="text" name="s_to"><br>
-                        <input type="submit" value="Submit">
-                      </form>
-                  </div>
-                </li>
-                <li class="dropdown">
-                <button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" id="dd" type="button" aria-expanded="false">Verð</button>
-                  <div class="dropdown-content">
-                      <form action="/action_page.php">
-                        Frá: <input type="text" name="p_from"><br>
-                        Til: <input type="text" name="p_to"><br>
-                        <input type="submit" value="Submit">
-                      </form>
-                  </div>
-                </li>
-                <li class="dropdown">
-                <button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" id="dd" type="button" aria-expanded="false">Herbergi</button>
-                  <div class="dropdown-content">
-                      <form action="/action_page.php">
-                        Fjöldi: <input type="text" name="amount"><br>
-                        <input type="submit" value="Submit">
-                      </form>
-                  </div>
-                </li>
-                <li class="dropdown">
-                <button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" id="dd" type="button" aria-expanded="false">Annað</button>
-                  <div class="dropdown-content">
-                    <label class="container">Bílskúr
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Lyfta
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Sérinngangur
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </li>
-                <button class="btn btn-default" id="hreinsa" type="button">Hreinsa</button>
+        <!-- carousel goes here -->
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="/static/images/ourLordAndSavior.jpg" alt="Chania">
+              <div class="carousel-caption">
+                <h3>Los Angeles</h3>
+                <p>LA is always so much fun!</p>
+              </div>
             </div>
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Stimplið inn götuheiti...">
-              <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Leita</button>
-              </span>
-            </div><!-- /input-group -->
-          </div><!-- /.col-lg-6 -->
-      </div>
+
+            <div class="item">
+              <img src="/static/images/ourLordAndSavior.jpg" alt="Chicago">
+              <div class="carousel-caption">
+                <h3>Chicago</h3>
+                <p>Thank you, Chicago!</p>
+              </div>
+            </div>
+
+            <div class="item">
+              <img src="/static/images/ourLordAndSavior.jpg" alt="New York">
+              <div class="carousel-caption">
+                <h3>New York</h3>
+                <p>We love the Big Apple!</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+    <!-- carousel ends here -->
+
+        {% block search %}
+            {% include 'search.html' %}
+        {% endblock %}
     </div>
   </div>
 </header>

@@ -3,7 +3,7 @@
     <h1>{{ eign.heimilisfang }}   {{ eign.postnumer }} {{ eign.baejarfelag }}</h1>
     <img src="https://i.imgur.com/{{ eign.eignmynd_set.first.mynd }}.jpg"/>
     <!-- Check if eign is a foreign key in the opinhus table -->
-    {% if eign.er_opid.exists %}
+    {% if eign.er_opid.exists and dagur.date < opidhus.first.til.date and dagur.time < opidhus.first.til.time  %}
         <!-- If it is... show information about the open house -->
         <h1>Opiðhús:  frá:{{ opidhus.first.fra }} - Til:{{ opidhus.first.til }}</h1>
     {% endif %}

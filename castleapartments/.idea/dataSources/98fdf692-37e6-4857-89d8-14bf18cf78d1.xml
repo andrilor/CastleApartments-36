@@ -128,7 +128,11 @@
       <ObjectId>1817487</ObjectId>
       <StateNumber>7438860</StateNumber>
       <Owner>axdsnirv</Owner>
+<<<<<<< HEAD
       <IntrospectionStateNumber>9302428</IntrospectionStateNumber>
+=======
+      <IntrospectionStateNumber>9306557</IntrospectionStateNumber>
+>>>>>>> cc085c31bb24a446d016981296b7ae8361538f76
       <Current>1</Current>
       <Visible>1</Visible>
       <Relations>sequence|table|1926907|1926909|1
@@ -9522,7 +9526,11 @@ sequence|table|1927218|1927220|1
       <Comment>standard public schema</Comment>
       <StateNumber>359</StateNumber>
       <Owner>postgres</Owner>
+<<<<<<< HEAD
       <IntrospectionStateNumber>9302433</IntrospectionStateNumber>
+=======
+      <IntrospectionStateNumber>9306563</IntrospectionStateNumber>
+>>>>>>> cc085c31bb24a446d016981296b7ae8361538f76
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>

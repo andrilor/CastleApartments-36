@@ -1,7 +1,3 @@
-.red {
-    background-color: gray;
-}
-
 .navbar {
     margin-bottom: 0px;
     background-color: #FCF7F5;
@@ -10,6 +6,35 @@
 .navbar-fixed-bottom {
     background-color: #D9C1B4;
 }
+.navbar-brand{
+    padding: 0px;
+    margin-left: 5px;
+}
+.navbar-brand img{
+    height: auto;
+    max-height: -webkit-fill-available;
+}
+
+.navbar-nav{
+    padding: 5px;
+}
+
+.nav>li:hover {
+    background-color: #A7C1D9;
+}
+
+.carousel-inner img{
+    margin: auto;
+    width: 100%;
+}
+
+carousel-control .glyphicon-chevron-left{
+    position: absolute;
+    left: 50%;
+    top: 15%;
+
+}
+
 .search_bar {
 	width: 90%;
 	height: 18%;
@@ -195,7 +220,10 @@ html, body {
     max-width: 100%;
     overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
-    background-color: #FCF7F5;
+    background-color: #FCF7F5;min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 100;
+    right: -30px;
 }
 
 .dropbtn {
@@ -233,6 +261,7 @@ html, body {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    left: auto;
 }
 
 .dropdown-content a:hover {background-color: #ddd;}
@@ -454,14 +483,7 @@ nav li #login-content {
 
 
 
-
-
-
-
-
 /* prufa */
-
-
 
 .container {
   background-color: #f2f2f2;
@@ -517,5 +539,3 @@ span.price {
   float: right;
   color: grey;
 }
-
-
