@@ -70,6 +70,16 @@
         <p>Bílskúr</p>
     {% endif %}
 
+    {% if user.is_authenticated %}
+
+        <a href="{% url 'index-pantanir' %}">Kaupa núna</a>
+
+    {% else %}
+
+        <a href="{% url 'login' %}">Kaupa núna</a>
+
+    {% endif %}
+
     <!-- -->
 
     {% for eignmynd in eign.eignmynd_set.all %}
