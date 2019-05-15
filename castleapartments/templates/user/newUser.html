@@ -11,8 +11,8 @@
         <title>Castle apartments</title>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
         <!-- Optional theme -->
         <link href="i.imgur.com">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
@@ -36,20 +36,20 @@
                 <span class="icon-bar"></span>
 
             </button>
-            <a class="navbar-brand" href="{% url 'index-forsida' %}"><img src="/static/images/logoh.png" alt="Castle Apartments"></a>
+            <a class="navbar-brand" href="">Castle apartments</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="{% url 'index-eignir' %}">Eignir </a></li>
-                <li><a href="{% url 'index-opinhus' %}">Opin hús</a></li>
-                <li><a href="{% url 'index-verdmat' %}">Verðmat</a></li>
-                <li><a href="{% url 'index-starfsmenn' %}">Starfsmenn</a></li>
-                <li><a href="{% url 'index-umokkur' %}">Um okkur</a></li>
+                <li><a href="">Eignir</a></li>
+                <li><a href="">Opin hús</a></li>
+                <li><a href="">Verðmat</a></li>
+                <li><a href="">Starfsmenn</a></li>
+                <li><a href="">Um okkur</a></li>
             </ul>
 
-            <ul class="nav navbar-nav navbar-right">
+            <!-- <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     {% if user.is_authenticated %}
 
@@ -73,7 +73,7 @@
                         {% endif %}
                     </div>
                 </li>
-            </ul>
+            </ul>-->
 
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -81,9 +81,9 @@
 
 
     <div class="container">
-    {% block content %}
+        {% block content %}
 
-    {% endblock %}
+        {% endblock %}
     </div>
 
     <nav class="navbar navbar-default navbar-fixed-bottom">
@@ -104,17 +104,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{% url 'index-forsida' %}">Forsíða</a>
+            <a class="navbar-brand" href="">Forsíða</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
 
-            <li><a href="{% url 'index-eignir' %}">Eignir <span class="sr-only">(current)</span></a></li>
-            <li><a href="{% url 'index-opinhus' %}">Opin hús</a></li>
-            <li><a href="{% url 'index-starfsmenn' %}">Starfsmenn</a></li>
-            <li><a href="{% url 'index-umokkur' %}">Um okkur</a></li>
+            <li><a href="">Eignir <span class="sr-only">(current)</span></a></li>
+            <li><a href="">Opin hús</a></li>
+            <li><a href="">Starfsmenn</a></li>
+            <li><a href="">Um okkur</a></li>
 
             </ul>
 
