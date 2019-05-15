@@ -15,3 +15,11 @@ def uppl_um_eign(request, id):
     return render(request, 'eignir/eignir_upplysingar.html', {
         'eign': eign, 'opidhus': opidhus, 'dagur': dagur
     })
+
+def alphebeticallySortedEign(request):
+    context = {'eignir': Eign.objects.order_by('heimilisfang')}
+    return render(request, 'eignir/index.html', context)
+
+def priceSortedEign(request):
+    context = {'eignir': Eign.objects.order_by('-verd')}
+    return render(request, 'eignir/index.html', context)
