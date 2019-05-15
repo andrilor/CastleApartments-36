@@ -1,8 +1,10 @@
+{% load static %}
 <div class="well-eign">
     <a href="/eignir/{{ eign.id }}">
         <img class="eign-img" src="https://i.imgur.com/{{ eign.eignmynd_set.first.mynd }}.jpg"/>
         <h4>{{ eign.heimilisfang }}   {{ eign.postnumer }} {{ eign.baejarfelag }}</h4>
-        <p>verð: {{ eign.verd }}</p>
+        <p>verð:</p>
+        <p id="price">{{ eign.verd }}</p>
         <p>stærd: {{ eign.staerd }} fermetrar</p>
     </a>
 </div>
