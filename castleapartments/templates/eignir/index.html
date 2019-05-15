@@ -6,8 +6,10 @@
 <li class="dropdown">
     <button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" id="dd" type="button" aria-expanded="false">Raða eftir</button>
     <div class="dropdown-content">
-        <a href="{% url 'sorted-name' %}">Nafn</a>
-        <a href="{% url 'sorted-price' %}">Verð</a>
+        <a href="{% url 'sorted-name-asc' %}">Nafn Asc</a>
+        <a href="{% url 'sorted-name-desc' %}">Nafn Desc</a>
+        <a href="{% url 'sorted-price-desc' %}">Verð Desc</a>
+        <a href="{% url 'sorted-price-asc' %}">Verð Asc</a>
     </div>
 </li>
 <h3> Hér kemur listi af eignum </h3>

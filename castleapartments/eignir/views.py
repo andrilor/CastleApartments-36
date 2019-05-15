@@ -16,10 +16,18 @@ def uppl_um_eign(request, id):
         'eign': eign, 'opidhus': opidhus, 'dagur': dagur
     })
 
-def alphebeticallySortedEign(request):
+def alphebeticallySortedEignDesc(request):
     context = {'eignir': Eign.objects.order_by('heimilisfang')}
     return render(request, 'eignir/index.html', context)
 
-def priceSortedEign(request):
+def alphebeticallySortedEignAsc(request):
+    context = {'eignir': Eign.objects.order_by('-heimilisfang')}
+    return render(request, 'eignir/index.html', context)
+
+def priceSortedEignDesc(request):
     context = {'eignir': Eign.objects.order_by('-verd')}
+    return render(request, 'eignir/index.html', context)
+
+def priceSortedEignAsc(request):
+    context = {'eignir': Eign.objects.order_by('verd')}
     return render(request, 'eignir/index.html', context)
