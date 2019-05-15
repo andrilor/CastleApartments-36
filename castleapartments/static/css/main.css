@@ -121,6 +121,33 @@ h1 {
     width: 30em;
 }
 
+.eign-upplysingar-img {
+    width: 50em;
+    height: 25em;
+    display: inline-block;
+    float: left;
+}
+
+.eign-uppl {
+    display: inline-block;
+    float: right;
+}
+
+.lysing {
+    width: ;
+    border: 1px solid black;
+    margin-top: 5em;
+    display: block;
+    float: right;
+}
+
+#map {
+    width:50%;
+    height:400px;
+    display: inline-block;
+    float: right;
+}
+
 .opin-hus-container .well-starfsmadur {
     display: inline-block;
     margin-right: 40px;
