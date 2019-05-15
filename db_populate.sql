@@ -275,6 +275,7 @@ INSERT INTO opinhus_opinhus ("fra", til, eign_id) VALUES ('2019-05-20 15:30:00',
 INSERT INTO opinhus_opinhus ("fra", til, eign_id) VALUES ('2019-05-25 16:30:00', '2019-05-25 17:30:00', 3);
 INSERT INTO opinhus_opinhus ("fra", til, eign_id) VALUES ('2019-05-22 15:30:00', '2019-05-22 16:30:00', 6);
 INSERT INTO opinhus_opinhus ("fra", til, eign_id) VALUES ('2019-05-20 17:30:00', '2019-05-20 18:30:00', 8);
+INSERT INTO opinhus_opinhus ("fra", til, eign_id) VALUES ('2018-05-20 17:30:00', '2018-05-20 18:30:00', 4);
 
 /* Þarf ekki að búa til en kerfið sér um eftirfarandi:
 

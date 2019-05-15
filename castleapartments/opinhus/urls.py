@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name = "index-opinhus"),
-    path('<int:id>', views.get_opinhus_by_id, name="opinhus")
+    path('<int:id>', views.check_if__opinhus_exists_by_eign, name="opinhus")
 ]
