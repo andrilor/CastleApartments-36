@@ -64,9 +64,10 @@
 </header>
 <body>
 <section class="py-5">
-  <div class="container">
-    <h1 class="font-weight-light">Opin hús á næstunni</h1>
-    <div class="opin-hus-container">
+  <div class="container" id="opinhus-container">
+    <h1>Opin Hús á Næstunni</h1>
+    <div class="elements-container">
+
        <div class="eignir">
             {% for eign in eignir %}
                 {% include 'eignir/eign.html' with eign=eign %}
@@ -79,7 +80,7 @@
 <section class="py-5">
   <div class="container">
     <h1 class="font-weight-light">Nýlegar eignir</h1>
-    <div class="opin-hus-container">
+    <div class="elements-container">
        <div class="eignir">
             {% for eign in eignir %}
                 {% include 'eignir/eign.html' with eign=eign %}
@@ -91,9 +92,9 @@
 </body>
 
 <section class="py-5">
-  <div class="container">
+  <div class="container" id="starfsmenn-container">
     <h1 class="font-weight-light">Starfsmenn</h1>
-    <div class="opin-hus-container">
+    <div class="elements-container">
         <div class="starfsmenn">
             {% for starfsmadur in starfsmenn %}
                 {% include 'starfsmenn/starfsmadur.html' with starfsmadur=starfsmadur %}
