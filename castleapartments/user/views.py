@@ -47,3 +47,4 @@ def newUser_upplysingar(request):
     return render(request, 'user/newUser_upplysingar.html', {
         'form': ProfileForm(instance=newUser_upplysingar)
     })
+
