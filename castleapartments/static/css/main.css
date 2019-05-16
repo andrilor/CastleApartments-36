@@ -122,30 +122,69 @@ h1 {
 }
 
 .eign-upplysingar-img {
-    width: 50em;
+    width: 35em;
     height: 25em;
     display: inline-block;
     float: left;
 }
 
-.eign-uppl {
+.img-map {
     display: inline-block;
-    float: right;
 }
 
-.lysing {
-    width: ;
-    border: 1px solid black;
-    margin-top: 5em;
-    display: block;
+#eign-heimilisfang {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.basic-info {
     float: right;
+    display: inline-block;
 }
 
 #map {
-    width:50%;
-    height:400px;
+    width:45em;
+    height:25em;
     display: inline-block;
-    float: right;
+    float: left;
+    margin-left: 2em;
+}
+
+.eign-seller {
+    display: inline-block;
+    float: left;
+    margin-right: 40px;
+    margin-top: 2em;
+    border: 1px black;
+    border-style: solid;
+    width: 20em;
+    background-color: white;
+}
+
+.eign-lysing {
+    display: inline-block;
+    float: left;
+    margin-left: 14em;
+    margin-top: 2em;
+    width: 50em;
+    background-color: white;
+}
+
+#fasteignarmat {
+    display: inline-block;
+    float: left;
+}
+
+#brunabotamat {
+    display: inline-block;
+    float: left;
+    margin-left: 1em;
+}
+
+#price_lysing {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 2em;
 }
 
 .opin-hus-container .well-starfsmadur {

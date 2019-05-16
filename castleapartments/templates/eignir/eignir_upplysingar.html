@@ -1,92 +1,76 @@
 {% extends "base.html" %}
 {% block content %}
-    <img class="eign-upplysingar-img" src="https://i.imgur.com/{{ eign.eignmynd_set.first.mynd }}.jpg"/>
-    <div id="map"></div>
-    <script>
-        // Initialize and add the map
-        function initMap() {
-          // The location of Uluru
-          var uluru = {lat: {{ eign.gps_stadsetning_set.first.lat }}, lng: {{ eign.gps_stadsetning_set.first.lng }}};
-          // The map, centered at Uluru
-          var map = new google.maps.Map(
-              document.getElementById('map'), {zoom: 18, center: uluru});
-          // The marker, positioned at Uluru
-          var marker = new google.maps.Marker({position: uluru, map: map});
-        }
-    </script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJnLWSHwuNsUtf0zWEigJyEQspeapIcyo&callback=initMap">
-    </script>
-    <div class="eign-uppl">
-        <p>{{ eign.heimilisfang }}   {{ eign.postnumer }} {{ eign.baejarfelag }}</p>
-        <!-- Check if eign is a foreign key in the opinhus table -->
-        {% if eign.er_opid.exists and dagur.date < opidhus.first.til.date and dagur.time < opidhus.first.til.time  %}
-            <!-- If it is... show information about the open house -->
-            <h1>Opiðhús:  frá:{{ opidhus.first.fra }} - Til:{{ opidhus.first.til }}</h1>
-        {% endif %}
-
-        <h4>Verð: {{ eign.verd }}Kr.</h4>
-        <p>Brunabotamat: {{ eign.brunabotamat }}</p>
-        <p>Fasteignamat: {{ eign.fasteignamat }}</p>
-        <p>{{ eign.tegund }}</p>
+    <div class="img-map">
+        <img class="eign-upplysingar-img" src="https://i.imgur.com/{{ eign.eignmynd_set.first.mynd }}.jpg"/>
+        <div id="map"></div>
+        <script>
+            // Initialize and add the map
+            function initMap() {
+              // The location of Uluru
+              var uluru = {lat: {{ eign.gps_stadsetning_set.first.lat }}, lng: {{ eign.gps_stadsetning_set.first.lng }}};
+              // The map, centered at Uluru
+              var map = new google.maps.Map(
+                  document.getElementById('map'), {zoom: 18, center: uluru});
+              // The marker, positioned at Uluru
+              var marker = new google.maps.Marker({position: uluru, map: map});
+            }
+        </script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJnLWSHwuNsUtf0zWEigJyEQspeapIcyo&callback=initMap">
+        </script>
+        <div class="basic-info">
+            <p>Stærd: {{ eign.staerd }} fm</p>
+            <p>Byggingarar: {{ eign.byggingarar }}</p>
+            <p>{{ eign.tegund }}</p>
+            <p>Herbergi: {{ eign.fjoldi_herbergja }}</p>
+            <p>Baðherbergi: {{ eign.fjoldi_badherberga }}</p>
+            {% if eign.gardur %}
+                <p>Garður</p>
+            {% endif %}
+            {% if eign.serinngangur %}
+                <p>Inngangur: Sérinngangur</p>
+            {% endif %}
+            {% if eign.sameigninlegur_inngangur %}
+                <p>Inngangur: Sameigninlegur inngangur</p>
+            {% endif %}
+            {% if eign.solpallur %}
+                <p>Sólpallur</p>
+            {% endif %}
+            {% if eign.svalir %}
+                <p>Svalir</p>
+            {% endif %}
+            {% if eign.hjolastolaadgengi %}
+                <p>Hjólastolaaðgengi</p>
+            {% endif %}
+            {% if eign.lyfta %}
+                <p>Lyfta</p>
+            {% endif %}
+            {% if eign.bilskur %}
+                <p>Bílskúr</p>
+            {% endif %}
+        </div>
+    </div>
+    <p id="eign-heimilisfang">{{ eign.heimilisfang }}, {{ eign.postnumer }} {{ eign.baejarfelag }} </p>
+    <div class="eign-info">
+        <div class="eign-seller">
+            <a href="/starfsmenn/{{eign.starfsmenn.id }}">
+                <img class="eign-img" src="https://i.imgur.com/{{ eign.starfsmenn.starfsmadurmynd_set.first.mynd }}.jpg">
+                <p>{{ eign.starfsmenn.nafn }}</p>
+                <p>{{ eign.starfsmenn.starfsheiti }}</p>
+            </a>
+        </div>
+        <div class="eign-lysing">
+            <p>Lýsing: {{ eign.lysing }}</p>
+            <div class="prices">
+                <p id="fasteignarmat"><b>Fasteignamat:</b> {{ eign.fasteignamat }} Kr.</p>
+                <p id="brunabotamat"><b>Brunabotamat:</b> {{ eign.brunabotamat }} Kr.</p>
+                <p id="price_lysing"><b>Verð:</b> {{ eign.verd }}Kr.</p>
+            </div>
+        </div>
     </div>
 
-    <!-- -->
-
-
-
-    <!-- -->
-    <div class="lysing">
-        <p>Lýsing: {{ eign.lysing }}</p>
-        <p>Stærd: {{ eign.staerd }} fm</p>
-        <p>Byggingarar: {{ eign.byggingarar }}</p>
-        <p>Herbergi: {{ eign.fjoldi_herbergja }}</p>
-        <p>Baðherbergi: {{ eign.fjoldi_badherberga }}</p>
-        <p>Svefnherbergi: {{ eign.fjoldi_svefnherberga }}</p>
-    </div>
-    <!-- -->
-
-    {% if eign.laust_nuna %}
-        <p>Laus strax</p>
-    {% endif %}
-    {% if eign.gardur %}
-        <p>Gaður</p>
-    {% endif %}
-    {% if eign.serinngangur %}
-        <p>Inngangur: Sérinngangur</p>
-    {% endif %}
-    {% if eign.sameigninlegur_inngangur %}
-        <p>Inngangur: Sameigninlegur inngangur</p>
-    {% endif %}
-    {% if eign.solpallur %}
-        <p>Sólpallur</p>
-    {% endif %}
-    {% if eign.svalir %}
-        <p>Svalir</p>
-    {% endif %}
-    {% if eign.hjolastolaadgengi %}
-        <p>Hjólastolaaðgengi</p>
-    {% endif %}
-    {% if eign.lyfta %}
-        <p>Lyfta</p>
-    {% endif %}
-    {% if eign.bilskur %}
-        <p>Bílskúr</p>
-    {% endif %}
-
-    {% if user.is_authenticated %}
-
-        <a href="{% url 'index-pantanir' %}">Kaupa núna</a>
-
-    {% else %}
-
-        <a href="{% url 'login' %}">Kaupa núna</a>
-
-    {% endif %}
-
-    <!-- -->
-
-    {% for eignmynd in eign.eignmynd_set.all %}
+    <!--{% for eignmynd in eign.eignmynd_set.all %}
         <img src="https://i.imgur.com/{{ eignmynd.mynd }}.jpg"/>
-    {% endfor %}
+    {% endfor %}-->
+    
 {% endblock %}
