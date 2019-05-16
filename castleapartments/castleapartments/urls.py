@@ -18,7 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('pantanir', include('pantanir.urls')),
-    path('mittsvaedi', include('mittsvaedi.urls')),
+    path('mittsvaedi/', include('mittsvaedi.urls')),
     path('', include('forsida.urls')),
     path('forsida/', include('forsida.urls')),
     path('opinhus/', include('opinhus.urls')),
