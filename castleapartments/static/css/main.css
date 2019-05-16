@@ -553,7 +553,7 @@ span.price {
 .eignir-profile{
     position: absolute;
     top: 90px;
-    left: 40%;
+    left: 45%;
     width: 300px;
     height: 330px;
     border: 3px solid #a0928a;
@@ -568,15 +568,7 @@ span.price {
     display: table-cell;
     vertical-align: top;
     clear: right;
-    width: 500px;
-    padding: 0 0 20px 20px;
-}
-
-.kort {
-    display: table-cell;
-    vertical-align: top;
-    clear: right;
-    width: 500px;
+    width: 550px;
     padding: 0 0 20px 20px;
 }
 
@@ -585,7 +577,7 @@ span.price {
 }
 
 .upplysingar {
-    width: 830px;
+    width: 900px;
 }
 
 .greidslusida {
@@ -595,5 +587,17 @@ span.price {
 .column {
     float: left;
     width: 50%;
+    padding: 5px;
+}
+
+.column-left {
+    float: left;
+    width: 35%;
+    padding: 5px;
+}
+
+.column-right {
+    float: right;
+    width: 65%;
     padding: 5px;
 }

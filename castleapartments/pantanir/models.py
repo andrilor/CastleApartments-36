@@ -4,7 +4,7 @@ from eignir.models import Eign
 
 
 class Pantanir(models.Model):
-    notandanafn = models.ForeignKey(User, on_delete=models.CASCADE) # CASCADE for the time being.
+    notendanafn = models.ForeignKey(User, on_delete=models.CASCADE)
     heimilisfang = models.CharField(max_length=255)
     baejarfelag = models.CharField(max_length=255)
     postnumer = models.IntegerField()
@@ -30,6 +30,7 @@ class Pantanir(models.Model):
     borg_kaupanda = models.CharField(max_length=255)
     land_kaupanda = models.CharField(max_length=255)
     postnr_kaupanda = models.CharField(max_length=255)
+    dagsetning_solu = models.CharField(max_length=255)
 
     def __str__(self):
         return self.notandanafn

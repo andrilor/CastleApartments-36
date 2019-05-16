@@ -24,10 +24,10 @@ def index(request, id):
 
 def kvittun(request,id):
     eign = Eign.objects.get(id=id)
-    date=datetime.date.today().strftime("%B %d, %Y")
+    date = datetime.date.today().strftime("%B %d, %Y")
 
     instance = Pantanir.objects.create(heimilisfang=eign.heimilisfang, baejarfelag=eign.baejarfelag,
-                                       postnumer=eign.postnumer, verd=eign.verd,
+                                       postnumer=eign.postnumer, verd=eign.verd, dagsetning_solu=date,
                                        brunabotamat=eign.brunabotamat, fasteignamat=eign.fasteignamat,
                                        tegund=eign.tegund, staerd=eign.staerd,
                                        byggingarar=eign.byggingarar, sett_a_solu=eign.sett_a_solu,
@@ -40,10 +40,16 @@ def kvittun(request,id):
                                        kennitala_kaupanda=request.user.profile.kennitala,
                                        heimilisfang_kaupanda=request.user.profile.heimilisfang,
                                        borg_kaupanda=request.user.profile.borg, land_kaupanda=request.user.profile.land,
-                                       postnr_kaupanda=request.user.profile.postnr, notandanafn=request.user)
+                                       postnr_kaupanda=request.user.profile.postnr, notendanafn=request.user)
+
+    if Patnair.objects.get(notendanafn=request.user) > 1:
+        pantanir = Pantanir.objects.all().last()
+    else:
+        pantanir = Pantanir.objects.get(notendanafn=request.user)
+
 
     context = {'eign': Eign.objects.filter(id=id).delete(),
-               'pantanir': Pantanir.objects.all().last()}
+               'pantanir': pantanir}
     return render(request, 'pantanir/kvittun.html', context)
 
 

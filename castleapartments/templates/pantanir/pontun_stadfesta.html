@@ -7,14 +7,26 @@
 
     <div class="profile">
         <h4>Upplýsingar um kaupanda</h4>
-        <p>Fullt nafn: {{ user.profile.fullt_nafn }}</p>
-        <p>Kennitala: {{ user.profile.kennitala }}</p>
-        <p>Heimilisfang: {{ user.profile.heimilisfang }}</p>
-        <p>Borg: {{ user.profile.borg }}</p>
-        <p>Land: {{ user.profile.land }}</p>
-        <p>Póstnúmer: {{ user.profile.postnr }}</p>
-        <p>Sími: {{ user.profile.simi }}</p>
-        <p>Netfang: {{ user.profile.netfang }}</p>
+        <div class="column-left">
+            <p> Fullt nafn: </p>
+            <p> Kennitala: </p>
+            <p> Heimilisfang: </p>
+            <p> Borg: </p>
+            <p> Land: </p>
+            <p> Póstnúmer: </p>
+            <p> Sími: </p>
+            <p> Netfang: </p>
+        </div>
+        <div class="column-right">
+            <p> {{ user.profile.fullt_nafn }} </p>
+            <p> {{ user.profile.kennitala }} </p>
+            <p> {{ user.profile.heimilisfang }} </p>
+            <p> {{ user.profile.borg }} </p>
+            <p> {{ user.profile.land }} </p>
+            <p> {{ user.profile.postnr }} </p>
+            <p> {{ user.profile.simi }} </p>
+            <p> {{ user.profile.netfang }} </p>
+        </div>
     </div>
 
     <div class="eignir-profile">
@@ -25,13 +37,22 @@
 
     </div>
 
-    <div class="kort">
+    <div class="profile">
         <h4>Kortaupplýsingar</h4>
-        <p>Nafn korthafa: <u> {{ name }} </u> </p>
-        <p>Kortanúmer: <u> {{ card }} </u> </p>
-        <p>Gildistími mánuður: <u> {{ expmonth }} </u> </p>
-        <p>Gildistími ár: <u> {{ expyear }} </u> </p>
-        <p>CVC: <u> {{ cvc }} </u> </p>
+        <div class="column-left">
+            <p>Nafn korthafa: </p>
+            <p>Kortanúmer: </p>
+            <p>Gildistími mánuður: </p>
+            <p>Gildistími ár:  </p>
+            <p>CVC: </p>
+        </div>
+        <div class="column-right">
+            <p> {{ name }} </p>
+            <p> {{ card }} </p>
+            <p> {{ expmonth }} </p>
+            <p> {{ expyear }} </p>
+            <p> {{ cvc }} </p>
+        </div>
     </div>
 
 
