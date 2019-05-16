@@ -11,8 +11,8 @@
         <title>Castle apartments</title>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <!-- Optional theme -->
         <link href="i.imgur.com">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
@@ -36,45 +36,18 @@
                 <span class="icon-bar"></span>
 
             </button>
-            <a class="navbar-brand" href="">Castle apartments</a>
+            <a class="navbar-brand" href=""><img src="/static/images/logoh.png" alt="Castle Apartments"></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="">Eignir</a></li>
+                <li><a href="">Eignir </a></li>
                 <li><a href="">Opin hús</a></li>
                 <li><a href="">Verðmat</a></li>
                 <li><a href="">Starfsmenn</a></li>
                 <li><a href="">Um okkur</a></li>
             </ul>
-
-            <!-- <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    {% if user.is_authenticated %}
-
-                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ user.profile.fullt_nafn }}<span class="caret"></span></a>
-
-                    {% else %}
-
-                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Innskráning <span class="caret"></span></a>
-
-                    {% endif %}
-
-                    <div class="dropdown-content">
-                        {% if user.is_authenticated %}
-
-                            <a href="{% url 'index-mittsvaedi' %}">Mitt svæði</a>
-                            <a href="{% url 'logout' %}">Skrá út</a>
-                        {% else %}
-
-                            <a href="{% url 'login' %}">Skrá inn</a>
-                            <a href="{% url 'register' %}">Nýr notandi</a>
-                        {% endif %}
-                    </div>
-                </li>
-            </ul>-->
-
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
     </nav>

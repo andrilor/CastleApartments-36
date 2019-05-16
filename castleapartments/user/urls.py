@@ -9,5 +9,6 @@ urlpatterns = [
     path('profile', views.profile, name='profile'),
     path('newUserProfile', views.newUser, name = 'newUserProfile'),
     path('newUserUpplysingar', views.newUser_upplysingar, name = 'newUserUpplysingar'),
-    #path('<str:username>', views.newUser_haetavid, name = 'newUserhaetavid'),
+    #path('profile/<username>/', views.logout, name='logout'),
+    #url(r'^profile_view/(?P<username>\w+)/$', views.logout, name='logout'),
 ]
