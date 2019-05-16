@@ -72,11 +72,11 @@
 
     {% if user.is_authenticated %}
 
-        <a href="/pantanir/{{ eign.id }}">Kaupa núna</a>
+        <a href="/pantanir/{{ eign.id }}" class="btn">Kaupa núna</a>
 
     {% else %}
 
-        <a href="{% url 'login' %}">Kaupa núna</a>
+        <a href="{% url 'login' %}" class="btn">Kaupa núna</a>
 
     {% endif %}
 

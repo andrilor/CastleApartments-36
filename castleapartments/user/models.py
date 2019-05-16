@@ -4,6 +4,8 @@ from eignir.models import Eign
 
 class Land(models.Model):
     nafn = models.CharField(max_length=255)
+    def __str__(self):
+        return self.nafn
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -16,6 +18,7 @@ class Profile(models.Model):
     netfang = models.EmailField(max_length=50)
     simi = models.IntegerField()
     mynd = models.CharField(max_length=9999, blank=True)
+
 
 class leitarsaga(models.Model):
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE)

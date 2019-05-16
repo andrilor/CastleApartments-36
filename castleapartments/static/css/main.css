@@ -469,6 +469,14 @@ nav li #login-content {
     padding: 10px;
 }
 
+.center-kvittun {
+    margin: auto;
+    width: 35%;
+    border: 3px ;
+    padding: 10px;
+}
+
+
 .button, input, optgroup, select, textarea {
     margin: 5px;
     width: 100%;
@@ -488,41 +496,41 @@ nav li #login-content {
 /* prufa */
 
 .container {
-  background-color: #f2f2f2;
-  padding: 20px 20px 60px 50px;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 20px 20px 60px 50px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
 }
 
 input[type=text] {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
 }
 
 label {
-  margin-bottom: 10px;
-  display: block;
+    margin-bottom: 10px;
+    display: block;
 }
 
 .icon-container {
-  margin-bottom: 20px;
-  padding: 7px 0;
-  font-size: 24px;
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
 }
 
 .btn {
-  background-color: #a0928a;
-  color: white;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  width: 30%;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 17px;
+    background-color: #a0928a;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
 }
 
 .btn:hover {
@@ -541,6 +549,7 @@ span.price {
   float: right;
   color: grey;
 }
+
 .eignir-profile{
     position: absolute;
     top: 90px;
@@ -553,4 +562,38 @@ span.price {
 .profile-eign-img{
     height: 15em;
     width: 100%;
+}
+
+.profile {
+    display: table-cell;
+    vertical-align: top;
+    clear: right;
+    width: 500px;
+    padding: 0 0 20px 20px;
+}
+
+.kort {
+    display: table-cell;
+    vertical-align: top;
+    clear: right;
+    width: 500px;
+    padding: 0 0 20px 20px;
+}
+
+.profile-img{
+    width: 350px;
+}
+
+.upplysingar {
+    width: 830px;
+}
+
+.greidslusida {
+    width: 30%;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 5px;
 }
