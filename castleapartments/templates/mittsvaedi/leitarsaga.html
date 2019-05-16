@@ -2,8 +2,8 @@
 {% block content %}
 
 <div class="leitarsaga">
-    {% for foo in leitarsaga %}
-        {% include 'mittsvaedi/saga.html' with foo=foo %}
+    {% for saga in leitarsaga %}
+        {% include 'mittsvaedi/saga.html' with saga=saga %}
     {% endfor %}
 </div>
 {% endblock %}
