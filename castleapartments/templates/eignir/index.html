@@ -12,7 +12,11 @@
         <a href="{% url 'sorted-price-asc' %}">Verð Asc</a>
     </div>
 </li>
-<h3> Hér kemur listi af eignum </h3>
+
+{% block search %}
+    {% include 'search.html' %}
+{% endblock %}
+
 <div class="eignir">
     {% for eign in eignir %}
         {% include 'eignir/eign.html' with eign=eign %}
