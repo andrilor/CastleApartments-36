@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
-
+{% load static %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 {% block content %}
 
 <div class="center">
@@ -15,12 +16,9 @@
             <p>Sími: {{ user.profile.simi }}</p>
             <p>Netfang: {{ user.profile.netfang }}</p>
         </div>
-
+        <a href="{% url 'profile' %}">Breyta upplýsingum</a>
+        <a href="leitarsaga">Leitar saga</a>
     {% endif %}
-
-    <a href="{% url 'profile' %}" class="btn">Breyta upplýsingum</a>
-
 </div>
-
 
 {% endblock %}

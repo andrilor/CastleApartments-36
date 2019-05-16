@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="leitarsaga">
+    {% for foo in leitarsaga %}
+        {% include 'mittsvaedi/saga.html' with foo=foo %}
+    {% endfor %}
+</div>
+{% endblock %}

@@ -80,12 +80,12 @@
     <script>
         // Initialize and add the map
         function initMap() {
-          // The location of Uluru
+          // The location
           var uluru = {lat: {{ eign.gps_stadsetning_set.first.lat }}, lng: {{ eign.gps_stadsetning_set.first.lng }}};
-          // The map, centered at Uluru
+          // The map center
           var map = new google.maps.Map(
               document.getElementById('map'), {zoom: 18, center: uluru});
-          // The marker, positioned at Uluru
+          // The marker position
           var marker = new google.maps.Marker({position: uluru, map: map});
         }
     </script>
