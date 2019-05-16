@@ -4,6 +4,28 @@
 
 <div>
     <h1>Til hamingju með nýja húsið!!</h1>
+    <div class="kvittun">
+        <p>Castle apartments</p>
+        <p>Menntavegur 1</p>
+        <p>555-5555</p>
+        <img src="/static/images/logoh.png" />
+
+    </div>
+
+
+    <div class="center-kvittun">
+        <p>Dagsetning: {{ pantanir.dagsetning }}</p>
+        <h3>Heidarupphæð: {{ pantanir.verd }}</h3>
+
+        <p>Heimilisfang: {{ pantanir.heimilisfang }}</p>
+        <p>Bæjarfélag: {{ pantanir.baejarfelag }}</p>
+        <p>Póstnúmer: {{ pantanir.postnumer }}</p>
+        <p>Fasteignasali: {{ pantanir.starfsmenn }}</p>
+        <p>Söluaðili: Castle apartments</p>
+    </div>
+
+    <a href="{% url 'index-forsida' %}" class="btn">Loka</a>
+
 
 </div>
 

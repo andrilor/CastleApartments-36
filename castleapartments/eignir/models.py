@@ -32,8 +32,9 @@ class Eign(models.Model):
     simi_seljanda = models.IntegerField()
     netfang_seljanda = models.CharField(max_length=255)
     starfsmenn = models.ForeignKey(Starfsmenn, on_delete=models.CASCADE)
-    #def __str__(self):
-    #    return self.heimilisfang
+    def __str__(self):
+        return self.heimilisfang
+
 
 class GPS_Stadsetning(models.Model):
     heimilisfang = models.CharField(max_length=255)
