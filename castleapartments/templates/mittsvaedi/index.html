@@ -3,21 +3,22 @@
 {% block content %}
 
 <div class="center">
-    <h3> Þetta er profile síðan</h3>
-
     {% if user.is_authenticated %}
-        <div class="profile">
+        <div>
             <img class="profile-img" src="{{ user.profile.mynd }}" />
-            <h4>Nafn: {{ user.profile.fullt_nafn }}</h4>
+            <h3>{{ user.profile.fullt_nafn }}</h3>
             <p>Kennitala: {{ user.profile.kennitala }}</p>
             <p>Heimilisfang: {{ user.profile.heimilisfang }}</p>
+            <p>Borg: {{ user.profile.borg }}</p>
+            <p>Land: {{ user.profile.land }}</p>
+            <p>Póstnúmer: {{ user.profile.postnr }}</p>
             <p>Sími: {{ user.profile.simi }}</p>
             <p>Netfang: {{ user.profile.netfang }}</p>
         </div>
 
     {% endif %}
 
-    <a href="{% url 'profile' %}">Breyta upplýsingum</a>
+    <a href="{% url 'profile' %}" class="btn">Breyta upplýsingum</a>
 
 </div>
 

@@ -2,38 +2,46 @@
 
 {% block content %}
 
-<div>
+
+<div class="upplysingar">
 
     <div class="profile">
-
-        <div class="profile">
-            <h4>Fullt nafn: {{ user.profile.fullt_nafn }}</h4>
-            <p>Kennitala: {{ user.profile.kennitala }}</p>
-            <p>Heimilisfang: {{ user.profile.heimilisfang }}</p>
-            <p>Sími: {{ user.profile.simi }}</p>
-            <p>Netfang: {{ user.profile.netfang }}</p>
-        </div>
-
-        <div class="eignir-profile">
-            <img class="profile-eign-img" src="https://i.imgur.com/{{ eign.eignmynd_set.first.mynd }}.jpg"/>
-            <h5>{{ eign.heimilisfang }}  , {{ eign.postnumer }} , {{ eign.baejarfelag }}</h5>
-            <p>verð: {{ eign.verd }}</p>
-            <p>stærd: {{ eign.staerd }} fermetrar</p>
-        </div>
-
-        <div>
-            <h4>Kortaupplýsingar</h4>
-            <p>Nafn korthafa: <u> <b> {{ name }} </b> </u> </p>
-            <p>Kortanúmer: <u> <b>{{ card }} </b> </u> </p>
-            <p>Gildistími mánuður: <u> <b>{{ expmonth }} </b> </u> </p>
-            <p>Gildistími ár: <u> <b>{{ expyear }} </b> </u> </p>
-            <p>CVC: <u> <b>{{ cvc }} </u> </p>
-        </div>
+        <h4>Upplýsingar um kaupanda</h4>
+        <p>Fullt nafn: {{ user.profile.fullt_nafn }}</p>
+        <p>Kennitala: {{ user.profile.kennitala }}</p>
+        <p>Heimilisfang: {{ user.profile.heimilisfang }}</p>
+        <p>Borg: {{ user.profile.borg }}</p>
+        <p>Land: {{ user.profile.land }}</p>
+        <p>Póstnúmer: {{ user.profile.postnr }}</p>
+        <p>Sími: {{ user.profile.simi }}</p>
+        <p>Netfang: {{ user.profile.netfang }}</p>
     </div>
 
-    <div></div>
-        <a href="/pantanir/{{ eign.id }}" class="btn">Til baka</a>
-        <a href="/pantanir/kvittun/{{ eign.id }}" class="btn">Staðfesta kaup</a>
+    <div class="eignir-profile">
+        <img class="profile-eign-img" src="https://i.imgur.com/{{ eign.eignmynd_set.first.mynd }}.jpg"/>
+        <h5>{{ eign.heimilisfang }}  , {{ eign.postnumer }} {{ eign.baejarfelag }}</h5>
+        <p>stærd: {{ eign.staerd }} fermetrar</p>
+        <h3>verð: {{ eign.verd }} kr.</h3>
+
+    </div>
+
+    <div class="kort">
+        <h4>Kortaupplýsingar</h4>
+        <p>Nafn korthafa: <u> {{ name }} </u> </p>
+        <p>Kortanúmer: <u> {{ card }} </u> </p>
+        <p>Gildistími mánuður: <u> {{ expmonth }} </u> </p>
+        <p>Gildistími ár: <u> {{ expyear }} </u> </p>
+        <p>CVC: <u> {{ cvc }} </u> </p>
+    </div>
+
+
+    <div>
+        <div class="column">
+            <a href="/pantanir/{{ eign.id }}" class="btn">Til baka</a>
+        </div>
+        <div class="column">
+            <a href="/pantanir/kvittun/{{ eign.id }}" class="btn">Staðfesta kaup</a>
+        </div>
     </div>
 </div>
 
