@@ -42,7 +42,7 @@ carousel-control .glyphicon-chevron-left{
     border-radius: 15px;
 
 	position: absolute;
-	top:50%;
+	top:100%;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -103,7 +103,7 @@ h1 {
     display: inline-block;
     margin-right: 40px;
     margin-left: 10px;
-    margin-top: 5%;
+    margin-top: 3%;
     border: 1px black;
     border-style: solid;
     width: 30em;
@@ -485,9 +485,6 @@ nav li #login-content {
 }
 
 
-
-
-
 /* prufa */
 
 .container {
@@ -544,7 +541,6 @@ span.price {
   float: right;
   color: grey;
 }
-
 .eignir-profile{
     position: absolute;
     top: 90px;
