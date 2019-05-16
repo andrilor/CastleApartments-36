@@ -277,12 +277,17 @@ INSERT INTO opinhus_opinhus ("fra", til, eign_id) VALUES ('2019-05-22 15:30:00',
 INSERT INTO opinhus_opinhus ("fra", til, eign_id) VALUES ('2019-05-20 17:30:00', '2019-05-20 18:30:00', 8);
 INSERT INTO opinhus_opinhus ("fra", til, eign_id) VALUES ('2018-05-20 17:30:00', '2018-05-20 18:30:00', 4);
 
-/* Þarf ekki að búa til en kerfið sér um eftirfarandi:
+INSERT INTO user_land (nafn) values ('Ísland');
+INSERT INTO user_land (nafn) values ('Danmörk');
+INSERT INTO user_land (nafn) values ('Finnland');
+INSERT INTO user_land (nafn) values ('Noregur');
+INSERT INTO user_land (nafn) values ('Svíþjóð');
+INSERT INTO user_land (nafn) values ('Kína');
+INSERT INTO user_land (nafn) values ('Bandaríkin');
+INSERT INTO user_land (nafn) values ('Japan');
 
-INSERT INTO user_Profile (user, netfang, fullt_nafn, heimilisfang, simi) VALUES ();
 
-INSERT INTO user_Profile_mynd (mynd, profile_ID) VALUES ();
 
-INSERT INTO user_leitarsaga (profile_ID, eign_ID) VALUES ();
 
-*/
+
+
