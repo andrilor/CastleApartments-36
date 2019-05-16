@@ -8,4 +8,5 @@ urlpatterns = [
     path('sorted-name-asc', views.alphebeticallySortedEignAsc, name='sorted-name-asc'),
     path('sorted-price-desc', views.priceSortedEignDesc, name='sorted-price-desc'),
     path('sorted-price-asc', views.priceSortedEignAsc, name='sorted-price-asc'),
+    path('log', views.historylog, name='leitarsaga'),
 ]
