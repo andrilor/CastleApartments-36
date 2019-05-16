@@ -11,5 +11,5 @@ def get_profile_by_id(request, id):
     })
 
 def leitar_saga(request):
-    context = {'leitarsaga': leitarsaga.profile.objects.filter(Notendarnafn_id=request.user.id)}
+    context = {'leitarsaga': leitarsaga.objects.filter(profile_id=request.user.id)}
     return render(request, 'mittsvaedi/leitarsaga.html', context)
