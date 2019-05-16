@@ -11,5 +11,6 @@ def get_profile_by_id(request, id):
     })
 
 def leitar_saga(request):
-    context = {'leitarsaga': leitarsaga.objects.filter(profile_id=request.user.id)}
+    # tókst ekki að order_by('-time_stamp').distinct('eign') virkar ekki eins og ég vildi en virka þó
+    context = {'leitarsaga': leitarsaga.objects.order_by('-time_stamp').filter(notandanafn_id=request.user.id)}
     return render(request, 'mittsvaedi/leitarsaga.html', context)

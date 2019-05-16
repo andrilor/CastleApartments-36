@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from eignir.models import Eign
-from leitarsaga.models import Leitarsaga
 from opinhus.models import opinhus
 from datetime import datetime
+from user.models import leitarsaga
+
 
 def index(request):
     context = {'eignir': Eign.objects.all()}
@@ -35,5 +36,5 @@ def priceSortedEignAsc(request):
     return render(request, 'eignir/index.html', context)
 
 def historylog(request ,eign):
-    logs = Leitarsaga(notandanafn_id=request.user.id, eign_id=eign.id)
+    logs = leitarsaga(notandanafn_id=request.user.id, eign_id=eign.id)
     logs.save()
