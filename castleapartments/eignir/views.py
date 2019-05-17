@@ -69,6 +69,49 @@ def index(request):
         if count == 5:
             tegund = Eign.objects.all()
 
+        postnumer = Eign.objects.none()
+        count = 0
+
+        if 'hoe' in request.GET:
+            postnumer = postnumer.union(Eign.objects.filter(postnumer__exact='101'))
+        else:
+            count = count + 1
+
+        if 'hos' in request.GET:
+            postnumer = postnumer.union(Eign.objects.filter(postnumer__exact='107'))
+        else:
+            count = count + 1
+
+        if 'ah' in request.GET:
+            postnumer = postnumer.union(Eign.objects.filter(postnumer__exact='800'))
+        else:
+            count = count + 1
+
+        if 'hof' in request.GET:
+            postnumer = postnumer.union(Eign.objects.filter(postnumer__exact='105'))
+        else:
+            count = count + 1
+
+        if 'hot' in request.GET:
+            postnumer = postnumer.union(Eign.objects.filter(postnumer__exact='112'))
+        else:
+            count = count + 1
+
+        if 'hofj' in request.GET:
+            postnumer = postnumer.union(Eign.objects.filter(postnumer__exact='104'))
+        else:
+            count = count + 1
+
+        if 'hoth' in request.GET:
+            postnumer = postnumer.union(Eign.objects.filter(postnumer__exact='113'))
+        else:
+            count = count + 1
+
+        if count == 7:
+            postnumer = Eign.objects.all()
+
+
+
         nidurstada = Eign.objects.none()
 
         if 'search' in request.GET:
@@ -77,7 +120,7 @@ def index(request):
         else:
             nidurstada = Eign.objects.all()
 
-        eignir = baejarfelag.intersection(tegund, nidurstada)
+        eignir = baejarfelag.intersection(tegund, nidurstada, postnumer)
 
 
     context = {'eignir': eignir}
