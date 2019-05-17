@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
     <div class = "center">
+        <h2>Nýskráning</h2>
         <form class = "form form-horizontal" method="post">
             {% csrf_token %}
             {{ form }}

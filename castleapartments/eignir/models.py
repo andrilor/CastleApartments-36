@@ -35,6 +35,7 @@ class Eign(models.Model):
     def __str__(self):
         return self.heimilisfang
 
+
 class GPS_Stadsetning(models.Model):
     heimilisfang = models.CharField(max_length=255)
     lat = models.FloatField(max_length=(10, 6))
