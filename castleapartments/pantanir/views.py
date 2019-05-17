@@ -43,7 +43,8 @@ def kvittun(request,id):
                                        postnr_kaupanda=request.user.profile.postnr, notandanafn=request.user)
 
     context = {'eign': Eign.objects.filter(id=id).delete(),
-               'pantanir': Pantanir.objects.all().last()}
+               'pantanir': Pantanir.objects.all().last(),
+               'date': date}
     return render(request, 'pantanir/kvittun.html', context)
 
 
