@@ -343,6 +343,27 @@
     width: 100%;
 }
 
+.starfsmenn-basic-info{
+    display: inline-block;
+    height: 25em;
+    width: 20em;
+}
+
+.starfsmenn-info-img{
+    width: 100%;
+}
+
+#starfs-nafn{
+    font-size: larger;
+}
+
+.starfsmenn-lysing {
+    display: inline-block;
+    float: right;
+    width: 60%;
+    margin-right: 10em;
+}
+
 .eign-img {
     height: auto;
     width: 100%;
