@@ -405,12 +405,14 @@
 }
 
 .btn-primary {
+    width: 25%;
     background-image: linear-gradient(to top, #9f8c84 0, #d9c1b4 100%);
     background-color: #bf4c24;
 }
 
-.dropdown-content li{
+.dropdown-content li, ul{
     list-style-type: none;
+    padding-left: 0px;
 }
 
 .dropdown #dd {
@@ -673,6 +675,10 @@ nav li #login-content {
     border-radius: 10px;
 }
 
+#comments, #email{
+    width: 100%;
+}
+
 .center {
     margin: auto;
     width: 26%;
@@ -705,6 +711,15 @@ h1 {
 
 
 /* prufa */
+.section-divider{
+    height: 1px;
+    width: 50%;
+    background-color: #A7C1D9;
+    margin-bottom: 5%;
+    position: absolute;
+    left: 25%;
+}
+
 
 .container {
     background-color: #f2f2f2;
@@ -731,7 +746,9 @@ label {
     padding: 7px 0;
     font-size: 24px;
 }
-
+#contact-button{
+    width: 5%;
+}
 .btn {
     background-color: #a0928a;
     color: white;
