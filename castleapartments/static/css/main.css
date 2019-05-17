@@ -646,9 +646,9 @@ nav li #login-content {
 
 .center-kvittun {
     margin: auto;
-    width: 35%;
+    width: 40%;
     border: 3px ;
-    padding: 10px;
+    padding: 50px;
 }
 
 
@@ -728,7 +728,7 @@ span.price {
 .eignir-profile{
     position: absolute;
     top: 90px;
-    left: 40%;
+    left: 60%;
     width: 300px;
     height: 330px;
     border: 3px solid #a0928a;
@@ -743,7 +743,7 @@ span.price {
     display: table-cell;
     vertical-align: top;
     clear: right;
-    width: 500px;
+    width: 550px;
     padding: 0 0 20px 20px;
 }
 
@@ -751,7 +751,7 @@ span.price {
     display: table-cell;
     vertical-align: top;
     clear: right;
-    width: 500px;
+    width: 550px;
     padding: 0 0 20px 20px;
 }
 
@@ -760,10 +760,12 @@ span.price {
 }
 
 .upplysingar {
-    width: 830px;
+    margin: auto;
+    width: 900px;
 }
 
 .greidslusida {
+    margin: auto;
     width: 30%;
 }
 
@@ -772,3 +774,24 @@ span.price {
     width: 50%;
     padding: 5px;
 }
+
+.kvittun{
+    width: 450px;
+    padding: 0px 0px 20px;
+}
+
+.column-left {
+    float: left;
+    width: 30%;
+}
+
+.column-right {
+    float: right;
+    width: 70%;
+}
+
+.mynd{
+    float: right;
+    width: 150px;
+}
+
