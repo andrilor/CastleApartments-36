@@ -24,7 +24,7 @@
     margin-left: 15px;
 }
 
-.navbar>li:hover {
+.navbar li:hover {
     background-color: #A7C1D9;
 }
 
@@ -90,8 +90,8 @@
 
 .opin-hus-container .well-eign {
     display: inline-block;
-    margin-right: 40px;
-    margin-left: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
     margin-top: 3%;
     border: 1px black;
     border-style: solid;
@@ -295,15 +295,27 @@
 
 .opin-hus-container .well-starfsmadur {
     display: inline-block;
-    margin-right: 40px;
-    margin-left: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
     margin-top: 2em;
     border: 8px black;
     border-style: solid;
     width: 18em;
     background-color: white;
 }
-
+.container-search{
+    padding: 5px;
+}
+#search-form{
+    max-width:85%;
+    position: absolute;
+    left: 25%;
+    padding: 10px;
+    background-color: #d9c1b4;
+}
+#search-btn{
+    max-width:50%;
+}
 .starfsmenn {
     width: 90%;
     position: relative;
@@ -316,14 +328,17 @@
 
 .well-starfsmadur {
     display: inline-block;
-    margin-right: 40px;
-    margin-left: 10px;
     margin-top: 2em;
     border: 1px black;
     border-style: solid;
     background-color: white;
 }
 
+.well-starfsmadur a:hover{
+    text-decoration: none;
+}
+
+.well-starfsmadur,
 .Starfsmenn-img {
     width: 100%;
 }
@@ -341,28 +356,6 @@
 .well-starfsmadur .Starfsmenn-img{
     height: auto;
     width: 100%;
-}
-
-.starfsmenn-basic-info{
-    display: inline-block;
-    height: 25em;
-    width: 20em;
-    float: left;
-}
-
-.starfsmenn-info-img{
-    width: 100%;
-}
-
-#starfs-nafn{
-    font-size: larger;
-}
-
-.starfsmenn-lysing {
-    display: inline-block;
-    float: right;
-    width: 60%;
-    margin-right: 10em;
 }
 
 .nylegar-eignir-container {
@@ -427,12 +420,14 @@
 }
 
 .btn-primary {
+    width: 25%;
     background-image: linear-gradient(to top, #9f8c84 0, #d9c1b4 100%);
     background-color: #bf4c24;
 }
 
-.dropdown-content li{
+.dropdown-content li, ul{
     list-style-type: none;
+    padding-left: 0px;
 }
 
 .dropdown #dd {
@@ -695,6 +690,10 @@ nav li #login-content {
     border-radius: 10px;
 }
 
+#comments, #email{
+    width: 100%;
+}
+
 .center {
     margin: auto;
     width: 26%;
@@ -727,6 +726,15 @@ h1 {
 
 
 /* prufa */
+.section-divider{
+    height: 1px;
+    width: 50%;
+    background-color: #A7C1D9;
+    margin-bottom: 5%;
+    position: absolute;
+    left: 25%;
+}
+
 
 .container {
     background-color: #f2f2f2;
@@ -753,7 +761,9 @@ label {
     padding: 7px 0;
     font-size: 24px;
 }
-
+#contact-button{
+    width: 5%;
+}
 .btn {
     background-color: #a0928a;
     color: white;
