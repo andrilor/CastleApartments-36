@@ -8,6 +8,7 @@ from user.models import Profile
 from user.forms.profile_form import ProfileForm
 from django.contrib.auth import authenticate, login
 
+#
 def register(request):
     if request.method == 'POST':
         form = UserCreationForm(data = request.POST)

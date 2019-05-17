@@ -6,6 +6,7 @@ import datetime
 
 
 def stadfesta(request, id):
+    # þetta er til þess að við getum farið með kortaupplýsingarnar yfir á næstu síðu til staðfestingar
     context = {'card': request.POST['cardnumber'],
                'name': request.POST['cardname'],
                'expmonth': request.POST['expmonth'],
@@ -24,8 +25,10 @@ def index(request, id):
 
 def kvittun(request,id):
     eign = Eign.objects.get(id=id)
+    #dagsetningin sem eignin er keypt
     date=datetime.date.today().strftime("%B %d, %Y")
 
+    #þegar eign er keypt setjum við allar upplýsingar sem við þurfum um hana í pantanir töfluna
     instance = Pantanir.objects.create(heimilisfang=eign.heimilisfang, baejarfelag=eign.baejarfelag,
                                        postnumer=eign.postnumer, verd=eign.verd,
                                        brunabotamat=eign.brunabotamat, fasteignamat=eign.fasteignamat,
@@ -42,6 +45,7 @@ def kvittun(request,id):
                                        borg_kaupanda=request.user.profile.borg, land_kaupanda=request.user.profile.land,
                                        postnr_kaupanda=request.user.profile.postnr, notandanafn=request.user)
 
+    #eyðum eigninni út út eign töflunni þegar eignin er keypt
     context = {'eign': Eign.objects.filter(id=id).delete(),
                'pantanir': Pantanir.objects.all().last(),
                'date': date}

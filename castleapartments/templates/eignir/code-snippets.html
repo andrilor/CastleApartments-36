@@ -8,52 +8,52 @@
 </div>
 
 <div class="eign-uppl">
-<p>{{ eign.heimilisfang }}   {{ eign.postnumer }} {{ eign.baejarfelag }}</p>
-<!-- Check if eign is a foreign key in the opinhus table -->
-{% if eign.er_opid.exists and dagur.date < opidhus.first.til.date and dagur.time < opidhus.first.til.time  %}
-    <!-- If it is... show information about the open house -->
-    <p>Opiðhús:  frá:{{ opidhus.first.fra }} - Til:{{ opidhus.first.til }}</p>
-{% endif %}
+    <p>{{ eign.heimilisfang }}   {{ eign.postnumer }} {{ eign.baejarfelag }}</p>
+    <!-- Check if eign is a foreign key in the opinhus table -->
+    {% if eign.er_opid.exists and dagur.date < opidhus.first.til.date and dagur.time < opidhus.first.til.time  %}
+        <!-- If it is... show information about the open house -->
+        <p>Opiðhús:  frá:{{ opidhus.first.fra }} - Til:{{ opidhus.first.til }}</p>
+    {% endif %}
 
-<h4>Verð: {{ eign.verd }}Kr.</h4>
-<p>Brunabotamat: {{ eign.brunabotamat }}</p>
-<p>Fasteignamat: {{ eign.fasteignamat }}</p>
-<p>{{ eign.tegund }}</p>
-{% if eign.laust_nuna %}
-<p>Laus strax</p>
-{% endif %}
-{% if eign.gardur %}
-    <p>Garður</p>
-{% endif %}
-{% if eign.serinngangur %}
-    <p>Inngangur: Sérinngangur</p>
-{% endif %}
-{% if eign.sameigninlegur_inngangur %}
-    <p>Inngangur: Sameigninlegur inngangur</p>
-{% endif %}
-{% if eign.solpallur %}
-    <p>Sólpallur</p>
-{% endif %}
-{% if eign.svalir %}
-    <p>Svalir</p>
-{% endif %}
-{% if eign.hjolastolaadgengi %}
-    <p>Hjólastolaaðgengi</p>
-{% endif %}
-{% if eign.lyfta %}
-    <p>Lyfta</p>
-{% endif %}
-{% if eign.bilskur %}
-    <p>Bílskúr</p>
-{% endif %}
+    <h4>Verð: {{ eign.verd }}Kr.</h4>
+    <p>Brunabotamat: {{ eign.brunabotamat }}</p>
+    <p>Fasteignamat: {{ eign.fasteignamat }}</p>
+    <p>{{ eign.tegund }}</p>
+    {% if eign.laust_nuna %}
+    <p>Laus strax</p>
+    {% endif %}
+    {% if eign.gardur %}
+        <p>Garður</p>
+    {% endif %}
+    {% if eign.serinngangur %}
+        <p>Inngangur: Sérinngangur</p>
+    {% endif %}
+    {% if eign.sameigninlegur_inngangur %}
+        <p>Inngangur: Sameigninlegur inngangur</p>
+    {% endif %}
+    {% if eign.solpallur %}
+        <p>Sólpallur</p>
+    {% endif %}
+    {% if eign.svalir %}
+        <p>Svalir</p>
+    {% endif %}
+    {% if eign.hjolastolaadgengi %}
+        <p>Hjólastolaaðgengi</p>
+    {% endif %}
+    {% if eign.lyfta %}
+        <p>Lyfta</p>
+    {% endif %}
+    {% if eign.bilskur %}
+        <p>Bílskúr</p>
+    {% endif %}
 
-{% if user.is_authenticated %}
+    {% if user.is_authenticated %}
 
-    <a href="{% url 'index-pantanir' %}">Kaupa núna</a>
+        <a href="{% url 'index-pantanir' %}">Kaupa núna</a>
 
-{% else %}
+    {% else %}
 
-    <a href="{% url 'login' %}">Kaupa núna</a>
+        <a href="{% url 'login' %}">Kaupa núna</a>
 
-{% endif %}
+    {% endif %}
 </div>

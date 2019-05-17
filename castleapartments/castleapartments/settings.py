@@ -138,7 +138,15 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
 
+
 LOGIN_URL = '/user/login'
+#þegar þú loggar þig inn ferðu inná forsíðuna
 LOGIN_REDIRECT_URL = '/'
 
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+# þetta er notað fyrir gleymt lykilorð kerfið, á meðan við erum að testa, fáum emailið upp í terminal -Birgitta
+# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+#Þegar það er sent email til notanda sem hefur gleymt lykilorðinu sínu höldum við utan um emailin í möppunni sent_emails -Birigtta
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")

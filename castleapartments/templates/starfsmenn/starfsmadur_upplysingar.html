@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+
     <div class="starfsmenn-basic-info">
         <img class="starfsmenn-info-img" src="https://i.imgur.com/{{ starfsmenn.starfsmadurmynd_set.first.mynd }}.jpg"/>
         <p>Sími: {{ starfsmenn.simi }}</p>
@@ -16,4 +17,5 @@
             {% include 'starfsmenn/starfsmenn_eign.html' with eignstarfsmenn=eignstarfsmenn %}
         {% endfor %}
     </div>-->
+
 {% endblock %}

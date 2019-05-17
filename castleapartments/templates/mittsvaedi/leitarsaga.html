@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="leitarsaga">
-    {% for saga in leitarsaga %}
-        {% include 'mittsvaedi/saga.html' with saga=saga %}
-    {% endfor %}
-</div>
+    <div class="leitarsaga">
+        {% for saga in leitarsaga %}
+            {% include 'mittsvaedi/saga.html' with saga=saga %}
+        {% endfor %}
+    </div>
 {% endblock %}
