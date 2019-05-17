@@ -42,14 +42,9 @@ def kvittun(request,id):
                                        borg_kaupanda=request.user.profile.borg, land_kaupanda=request.user.profile.land,
                                        postnr_kaupanda=request.user.profile.postnr, notendanafn=request.user)
 
-    if Patnair.objects.get(notendanafn=request.user) > 1:
-        pantanir = Pantanir.objects.all().last()
-    else:
-        pantanir = Pantanir.objects.get(notendanafn=request.user)
-
 
     context = {'eign': Eign.objects.filter(id=id).delete(),
-               'pantanir': pantanir}
+               'pantanir': Pantanir.objects.all().last()}
     return render(request, 'pantanir/kvittun.html', context)
 
 
