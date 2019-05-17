@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('pantanir', include('pantanir.urls')),
+    path('pantanir/', include('pantanir.urls')),
     path('mittsvaedi/', include('mittsvaedi.urls')),
     path('', include('forsida.urls')),
     path('forsida/', include('forsida.urls')),
