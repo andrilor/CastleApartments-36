@@ -21,11 +21,13 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJnLWSHwuNsUtf0zWEigJyEQspeapIcyo&callback=initMap">
         </script>
         <div class="basic-info">
+        <!--Uplýsingar um eignina frá gagnagrunninum - Fannar-->
             <p>Stærd: {{ eign.staerd }} fm</p>
             <p>Byggingarar: {{ eign.byggingarar }}</p>
             <p>{{ eign.tegund }}</p>
             <p>Herbergi: {{ eign.fjoldi_herbergja }}</p>
             <p>Baðherbergi: {{ eign.fjoldi_badherberga }}</p>
+        <!--Ef tilteknar uplýsingar eru til þá birtast þær í þessari röð - Fannar-->
             {% if eign.gardur %}
                 <p>Garður</p>
             {% endif %}
@@ -83,11 +85,17 @@
         <a href="{% url 'login' %}" class="btn">Kaupa núna</a>
 
     {% endif %}
+    <!--Stækkar myndirnar neðst á síðunni ef ýtt er á þær og geri bakgrunninn dökkan, minnkar þær aftur með því að ýta á 'x'-ið - Fannar-->
     <div class="eignir-img-gallery" id="pop">
+        <!--Fer í gegnum allar myndir af eignum hjá þessari eign - Fannar-->
         {% for eignmynd in eign.eignmynd_set.all %}
+            <!--gefur myndinni einstakt ID út frá seinni partinum af url-inu, kallar á enlarge() functionið þegar ýtt er á - Fannar-->
             <img class="eign-uppl-img" id="{{ eignmynd.mynd }}" src="https://i.imgur.com/{{ eignmynd.mynd }}.jpg" onclick="enlarge(this.id)"/>
+            <!--gefur modal classanum sérstakt id aftur með því að nota seinni partinn af url frá myndinni - Fannar-->
             <div id="myModal-{{ eignmynd.mynd }}" class="modal">
+                <!--Þegar ýtt er á 'x'-ið þá mynnnkar myndinn aftur - Fannar-->
               <span class="close" id="{{ eignmynd.mynd }}" onclick="shrink(this.id)">&times;</span>
+                <!--stærri útgáfan af myndinni - Fannar-->
               <img src="https://i.imgur.com/{{ eignmynd.mynd }}.jpg" class="modal-content" id="https://i.imgur.com/{{ eignmynd.mynd }}">
               <div id="caption"></div>
             </div>

@@ -137,20 +137,22 @@ def uppl_um_eign(request, id):
         'eign': eign, 'opidhus': opidhus, 'dagur': dagur
     })
 
-
+#Sortar eignum eftir réttri bókstafsröð - Fannar
 def alphebeticallySortedEignDesc(request):
     context = {'eignir': Eign.objects.order_by('heimilisfang')}
     return render(request, 'eignir/index.html', context)
 
-
+#Sortar eignum eftir öfugri bókstafsröð - Fannar
 def alphebeticallySortedEignAsc(request):
     context = {'eignir': Eign.objects.order_by('-heimilisfang')}
     return render(request, 'eignir/index.html', context)
 
+#Sortar eignum eftir verði, hæst fyrst - Fannar
 def priceSortedEignDesc(request):
     context = {'eignir': Eign.objects.order_by('-verd')}
     return render(request, 'eignir/index.html', context)
 
+#Sortar eignum eftir verði, lægst fyrst - Fannar
 def priceSortedEignAsc(request):
     context = {'eignir': Eign.objects.order_by('verd')}
     return render(request, 'eignir/index.html', context)
