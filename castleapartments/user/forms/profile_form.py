@@ -1,7 +1,7 @@
 from django.forms import ModelForm, widgets
 from user.models import Profile
 
-
+#Form til að halda utan um auka upplýsingar um notandann-Birgitta
 class ProfileForm(ModelForm):
     class Meta:
         model = Profile
