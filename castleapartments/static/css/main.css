@@ -308,8 +308,7 @@
 }
 #search-form{
     max-width:85%;
-    position: absolute;
-    left: 25%;
+    position: center;
     padding: 10px;
     background-color: #d9c1b4;
 }
