@@ -1,5 +1,7 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
+    <script src = {% static "js/enlarge_image.js" %}> </script>
     <div class="img-map">
         <img class="eign-upplysingar-img" src="https://i.imgur.com/{{ eign.eignmynd_set.first.mynd }}.jpg"/>
         <div id="map"></div>
@@ -48,6 +50,10 @@
             {% if eign.bilskur %}
                 <p>Bílskúr</p>
             {% endif %}
+            {% if eign.er_opid.exists and dagur.date < opidhus.first.til.date and dagur.time < opidhus.first.til.time  %}
+                <!-- If it is... show information about the open house -->
+                <p>Opiðhús:  frá:{{ opidhus.first.fra }} - Til:{{ opidhus.first.til }}</p>
+            {% endif %}
         </div>
     </div>
     <p id="eign-heimilisfang">{{ eign.heimilisfang }}, {{ eign.postnumer }} {{ eign.baejarfelag }} </p>
@@ -65,12 +71,18 @@
                 <p id="fasteignarmat"><b>Fasteignamat:</b> {{ eign.fasteignamat }} Kr.</p>
                 <p id="brunabotamat"><b>Brunabotamat:</b> {{ eign.brunabotamat }} Kr.</p>
                 <p id="price_lysing"><b>Verð:</b> {{ eign.verd }}Kr.</p>
+                <button class="buy-button" type="button">Kaupa</button>
             </div>
         </div>
     </div>
-
-    <!--{% for eignmynd in eign.eignmynd_set.all %}
-        <img src="https://i.imgur.com/{{ eignmynd.mynd }}.jpg"/>
-    {% endfor %}-->
-    
+    <div class="eignir-img-gallery" id="pop">
+        {% for eignmynd in eign.eignmynd_set.all %}
+            <img class="eign-uppl-img" id="{{ eignmynd.mynd }}" src="https://i.imgur.com/{{ eignmynd.mynd }}.jpg" onclick="enlarge(this.id)"/>
+            <div id="myModal-{{ eignmynd.mynd }}" class="modal">
+              <span class="close" id="{{ eignmynd.mynd }}" onclick="shrink(this.id)">&times;</span>
+              <img src="https://i.imgur.com/{{ eignmynd.mynd }}.jpg" class="modal-content" id="https://i.imgur.com/{{ eignmynd.mynd }}">
+              <div id="caption"></div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
