@@ -10,8 +10,9 @@ def index(request):
 
     eignir = Eign.objects.all()
 
-    if request.GET:
 
+    if request.GET:
+        # Check each field in the search form and adjust the query set accordingly:
         baejarfelag = Eign.objects.none()
         count = 0
 
@@ -35,6 +36,7 @@ def index(request):
         else:
             count = count + 1
 
+        # If none of the checkmarks in each category (svaedi / tegund etc) is checked... get all objects
         if count == 4:
             baejarfelag = Eign.objects.all()
 
@@ -111,7 +113,7 @@ def index(request):
             postnumer = Eign.objects.all()
 
 
-
+        # Apply the input from the search bar
         nidurstada = Eign.objects.none()
 
         if 'search' in request.GET:
@@ -120,6 +122,8 @@ def index(request):
         else:
             nidurstada = Eign.objects.all()
 
+        # Take the different querysets from each form field... and intersect them to get objects
+        # present in all of them
         eignir = baejarfelag.intersection(tegund, nidurstada, postnumer)
 
 
