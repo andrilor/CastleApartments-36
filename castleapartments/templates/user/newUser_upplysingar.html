@@ -1,16 +1,14 @@
-{% extends 'base.html' %}
+{% extends 'user/newUser.html' %}
 {% block content %}
     <div class = "center">
-        <h2>Nýskráning</h2>
+        <h2>Staðfesta</h2>
         <form class = "form form-horizontal" method="post">
             {% csrf_token %}
             {{ form }}
-            <div>
-                <input type="submit" class="btn" value="Nýskrá" />
-            </div>
+            <input type="submit" class="btn" value="Staðfesta" />
         </form>
+        <a href="" class="btn">Hætta við</a>
     </div>
-
 {% endblock %}
 
 

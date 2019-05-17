@@ -4,84 +4,46 @@
         <div class="dd-group">
             <li class="dropdown">
             <button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" id="dd" type="button" aria-expanded="false">Svæði</button>
-              <div class="dropdown-content">
-                    <label class="container">Reykjavík
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Kópavogur
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Akranes
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Selfoss
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-              </div>
-            </li>
-            <li class="dropdown">
-            <button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" id="dd" type="button" aria-expanded="false">Tegund</button>
-              <div class="dropdown-content">
-                <label class="container">Einbýli
+            <div class="dropdown-content">
+                <label class="container">Reykjavík
+                    <input type="checkbox" name="reykjavik">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Kópavogur
+                    <input type="checkbox" name="kopavogur">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Akranes
                     <input type="checkbox">
+                    <span class="checkmark" name="akranes"></span>
+                </label>
+                <label class="container">Selfoss
+                    <input type="checkbox" name="selfoss">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+        </li>
+        <li class="dropdown" id="dropdown2">
+            <button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" id="dd" type="button" aria-expanded="false">Tegund</button>
+            <div class="dropdown-content">
+                <label class="container">Einbýli
+                    <input type="checkbox" name="einbyli">
                     <span class="checkmark"></span>
                 </label>
                 <label class="container">Fjölbýli
-                    <input type="checkbox">
+                    <input type="checkbox" name="fjolbyli">
                     <span class="checkmark"></span>
                 </label>
                 <label class="container">Raðhús
-                    <input type="checkbox">
+                    <input type="checkbox" name="radhus">
                     <span class="checkmark"></span>
                 </label>
-              </div>
-            </li>
-            <li class="dropdown">
-            <button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" id="dd" type="button" aria-expanded="false">Stærð</button>
-              <div class="dropdown-content">
-                  <form action="/action_page.php">
-                    Frá: <input type="text" name="s_from"><br>
-                    Til: <input type="text" name="s_to"><br>
-                    <input type="submit" value="Submit">
-                  </form>
-              </div>
-            </li>
-            <li class="dropdown">
-            <button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" id="dd" type="button" aria-expanded="false">Verð</button>
-              <div class="dropdown-content">
-                  <form action="/action_page.php">
-                    Frá: <input type="text" name="p_from"><br>
-                    Til: <input type="text" name="p_to"><br>
-                    <input type="submit" value="Submit">
-                  </form>
-              </div>
-            </li>
-            <li class="dropdown">
-            <button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" id="dd" type="button" aria-expanded="false">Herbergi</button>
-              <div class="dropdown-content">
-                  <form action="/action_page.php">
-                    Fjöldi: <input type="text" name="amount"><br>
-                    <input type="submit" value="Submit">
-                  </form>
-              </div>
-            </li>
-            <li class="dropdown">
-            <button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" id="dd" type="button" aria-expanded="false">Annað</button>
-              <div class="dropdown-content">
-                <label class="container">Bílskúr
-                    <input type="checkbox">
+                <label class="container">Hæð
+                    <input type="checkbox" name="haed">
                     <span class="checkmark"></span>
                 </label>
-                <label class="container">Lyfta
-                    <input type="checkbox">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="container">Sérinngangur
-                    <input type="checkbox">
+                <label class="container">Sumarhús
+                    <input type="checkbox" name="sumarhus">
                     <span class="checkmark"></span>
                 </label>
               </div>

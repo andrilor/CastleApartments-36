@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="greidslusida">
+    <form action="/pantanir/stadfesta/{{ eign.id }}" method="post">
+        {% csrf_token %}
+        <div>
+            <h3>Greiðsluferli</h3>
+            <label for="cname">Nafn korthafa</label>
+            <input type="text" id="cname" name="cardname" placeholder="Jón Jónsson" required minlength="3">
+            <label for="ccnum">Kortanúmer</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="0000 0000 0000 0000" data-mask="0000 0000 0000 0000" required minlength="16">
+            <label for="expmonth">Gildistími mánuður</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="01" data-mask="00" required minlength="2">
+            <label for="expyear">Gildistími ár</label>
+            <input type="text" id="expyear" name="expyear" placeholder="2019" data-mask="0000" required minlength="4">
+            <label for="cvv">CVC</label>
+            <input type="text" id="cvv" name="cvv" placeholder="000" data-mask="000" required minlength="3">
+        </div>
+
+        <input type="submit" class="btn" value="Halda áfram" />
+
+    </form>
+
+</div>
+
+{% endblock %}
+

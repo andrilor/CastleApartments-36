@@ -1,57 +1,96 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
-    <h1>{{ eign.heimilisfang }}   {{ eign.postnumer }} {{ eign.baejarfelag }}</h1>
-    <img src="https://i.imgur.com/{{ eign.eignmynd_set.first.mynd }}.jpg"/>
-    <!-- Check if eign is a foreign key in the opinhus table -->
-    {% if eign.er_opid.exists and dagur.date < opidhus.first.til.date and dagur.time < opidhus.first.til.time  %}
-        <!-- If it is... show information about the open house -->
-        <h1>Opiðhús:  frá:{{ opidhus.first.fra }} - Til:{{ opidhus.first.til }}</h1>
-    {% endif %}
+    <script src = {% static "js/enlarge_image.js" %}> </script>
+    <div class="img-map">
+        <img class="eign-upplysingar-img" src="https://i.imgur.com/{{ eign.eignmynd_set.first.mynd }}.jpg"/>
+        <div id="map"></div>
+        <script>
+            // Initialize and add the map
+            function initMap() {
+              // The location of Uluru
+              var uluru = {lat: {{ eign.gps_stadsetning_set.first.lat }}, lng: {{ eign.gps_stadsetning_set.first.lng }}};
+              // The map, centered at Uluru
+              var map = new google.maps.Map(
+                  document.getElementById('map'), {zoom: 18, center: uluru});
+              // The marker, positioned at Uluru
+              var marker = new google.maps.Marker({position: uluru, map: map});
+            }
+        </script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJnLWSHwuNsUtf0zWEigJyEQspeapIcyo&callback=initMap">
+        </script>
+        <div class="basic-info">
+            <p>Stærd: {{ eign.staerd }} fm</p>
+            <p>Byggingarar: {{ eign.byggingarar }}</p>
+            <p>{{ eign.tegund }}</p>
+            <p>Herbergi: {{ eign.fjoldi_herbergja }}</p>
+            <p>Baðherbergi: {{ eign.fjoldi_badherberga }}</p>
+            {% if eign.gardur %}
+                <p>Garður</p>
+            {% endif %}
+            {% if eign.serinngangur %}
+                <p>Inngangur: Sérinngangur</p>
+            {% endif %}
+            {% if eign.sameigninlegur_inngangur %}
+                <p>Inngangur: Sameigninlegur inngangur</p>
+            {% endif %}
+            {% if eign.solpallur %}
+                <p>Sólpallur</p>
+            {% endif %}
+            {% if eign.svalir %}
+                <p>Svalir</p>
+            {% endif %}
+            {% if eign.hjolastolaadgengi %}
+                <p>Hjólastolaaðgengi</p>
+            {% endif %}
+            {% if eign.lyfta %}
+                <p>Lyfta</p>
+            {% endif %}
+            {% if eign.bilskur %}
+                <p>Bílskúr</p>
+            {% endif %}
+            {% if eign.er_opid.exists and dagur.date < opidhus.first.til.date and dagur.time < opidhus.first.til.time  %}
+                <!-- If it is... show information about the open house -->
+                <p>Opiðhús:  frá:{{ opidhus.first.fra }} - Til:{{ opidhus.first.til }}</p>
+            {% endif %}
+        </div>
+    </div>
+    <p id="eign-heimilisfang">{{ eign.heimilisfang }}, {{ eign.postnumer }} {{ eign.baejarfelag }} </p>
+    <div class="eign-info">
+        <div class="eign-seller">
+            <a href="/starfsmenn/{{eign.starfsmenn.id }}">
+                <img class="eign-img" src="https://i.imgur.com/{{ eign.starfsmenn.starfsmadurmynd_set.first.mynd }}.jpg">
+                <p>{{ eign.starfsmenn.nafn }}</p>
+                <p>{{ eign.starfsmenn.starfsheiti }}</p>
+            </a>
+        </div>
+        <div class="eign-lysing">
+            <p>Lýsing: {{ eign.lysing }}</p>
+            <div class="prices">
+                <p id="fasteignarmat"><b>Fasteignamat:</b> {{ eign.fasteignamat }} Kr.</p>
+                <p id="brunabotamat"><b>Brunabotamat:</b> {{ eign.brunabotamat }} Kr.</p>
+                <p id="price_lysing"><b>Verð:</b> {{ eign.verd }}Kr.</p>
+            </div>
+        </div>
+    </div>
+    {% if user.is_authenticated %}
 
-    <h4>Verð: {{ eign.verd }}Kr.</h4>
-    <p>Brunabotamat: {{ eign.brunabotamat }}</p>
-    <p>Fasteignamat: {{ eign.fasteignamat }}</p>
-    <p>{{ eign.tegund }}</p>
-    <p>Lýsing: {{ eign.lysing }}</p>
-    <p>Stærd: {{ eign.staerd }} fm</p>
-    <p>Byggingarar: {{ eign.byggingarar }}</p>
-    <p>Herbergi: {{ eign.fjoldi_herbergja }}</p>
-    <p>Baðherbergi: {{ eign.fjoldi_badherberga }}</p>
-    <p>Svefnherbergi: {{ eign.fjoldi_svefnherberga }}</p>
+        <a href="/pantanir/{{ eign.id }}" class="btn">Kaupa núna</a>
 
-    <!-- -->
+    {% else %}
 
-    {% if eign.laust_nuna %}
-        <p>Laus strax</p>
-    {% endif %}
-    {% if eign.gardur %}
-        <p>Gaður</p>
-    {% endif %}
-    {% if eign.serinngangur %}
-        <p>Inngangur: Sérinngangur</p>
-    {% endif %}
-    {% if eign.sameigninlegur_inngangur %}
-        <p>Inngangur: Sameigninlegur inngangur</p>
-    {% endif %}
-    {% if eign.solpallur %}
-        <p>Sólpallur</p>
-    {% endif %}
-    {% if eign.svalir %}
-        <p>Svalir</p>
-    {% endif %}
-    {% if eign.hjolastolaadgengi %}
-        <p>Hjólastolaaðgengi</p>
-    {% endif %}
-    {% if eign.lyfta %}
-        <p>Lyfta</p>
-    {% endif %}
-    {% if eign.bilskur %}
-        <p>Bílskúr</p>
-    {% endif %}
+        <a href="{% url 'login' %}" class="btn">Kaupa núna</a>
 
-    <!-- -->
-
-    {% for eignmynd in eign.eignmynd_set.all %}
-        <img src="https://i.imgur.com/{{ eignmynd.mynd }}.jpg"/>
-    {% endfor %}
+    {% endif %}
+    <div class="eignir-img-gallery" id="pop">
+        {% for eignmynd in eign.eignmynd_set.all %}
+            <img class="eign-uppl-img" id="{{ eignmynd.mynd }}" src="https://i.imgur.com/{{ eignmynd.mynd }}.jpg" onclick="enlarge(this.id)"/>
+            <div id="myModal-{{ eignmynd.mynd }}" class="modal">
+              <span class="close" id="{{ eignmynd.mynd }}" onclick="shrink(this.id)">&times;</span>
+              <img src="https://i.imgur.com/{{ eignmynd.mynd }}.jpg" class="modal-content" id="https://i.imgur.com/{{ eignmynd.mynd }}">
+              <div id="caption"></div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}

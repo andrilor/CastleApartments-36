@@ -92,6 +92,21 @@ INSERT INTO eignir_GPS_Stadsetning (Heimilisfang, lat, lng, eign_id) VALUES ('BR
 INSERT INTO eignir_GPS_Stadsetning (Heimilisfang, lat, lng, eign_id) VALUES ('ÓÐINSGATA 4', 64.144789, -21.931897, 9);
 INSERT INTO eignir_GPS_Stadsetning (Heimilisfang, lat, lng, eign_id) VALUES ('HJARÐARHAGI 21', 64.138549, -21.958056, 10);
 
+INSERT INTO opinhus_opinhus ("fra", til, eign_id) VALUES ('2019-05-20 15:30:00', '2019-05-20 16:30:00', 1);
+INSERT INTO opinhus_opinhus ("fra", til, eign_id) VALUES ('2019-05-25 16:30:00', '2019-05-25 17:30:00', 3);
+INSERT INTO opinhus_opinhus ("fra", til, eign_id) VALUES ('2019-05-22 15:30:00', '2019-05-22 16:30:00', 6);
+INSERT INTO opinhus_opinhus ("fra", til, eign_id) VALUES ('2019-05-20 17:30:00', '2019-05-20 18:30:00', 8);
+INSERT INTO opinhus_opinhus ("fra", til, eign_id) VALUES ('2018-05-20 17:30:00', '2018-05-20 18:30:00', 4);
+
+INSERT INTO user_land (nafn) values ('Ísland');
+INSERT INTO user_land (nafn) values ('Danmörk');
+INSERT INTO user_land (nafn) values ('Finnland');
+INSERT INTO user_land (nafn) values ('Noregur');
+INSERT INTO user_land (nafn) values ('Svíþjóð');
+INSERT INTO user_land (nafn) values ('Kína');
+INSERT INTO user_land (nafn) values ('Bandaríkin');
+INSERT INTO user_land (nafn) values ('Japan');
+
 INSERT INTO eignir_Eignmynd (mynd, eign_id) VALUES ('Qk61Rpm', 1);
 INSERT INTO eignir_Eignmynd (mynd, eign_id) VALUES ('hnDb27X', 1);
 INSERT INTO eignir_Eignmynd (mynd, eign_id) VALUES ('gdyKu5g', 1);
@@ -271,17 +286,3 @@ INSERT INTO eignir_Eignmynd (mynd, eign_id) VALUES ('gVCGGX7', 10);
 INSERT INTO eignir_Eignmynd (mynd, eign_id) VALUES ('RcS57U1', 10);
 INSERT INTO eignir_Eignmynd (mynd, eign_id) VALUES ('SgUjIk4', 10);
 
-INSERT INTO opinhus_opinhus ("fra", til, eign_id) VALUES ('2019-05-20 15:30:00', '2019-05-20 16:30:00', 1);
-INSERT INTO opinhus_opinhus ("fra", til, eign_id) VALUES ('2019-05-25 16:30:00', '2019-05-25 17:30:00', 3);
-INSERT INTO opinhus_opinhus ("fra", til, eign_id) VALUES ('2019-05-22 15:30:00', '2019-05-22 16:30:00', 6);
-INSERT INTO opinhus_opinhus ("fra", til, eign_id) VALUES ('2019-05-20 17:30:00', '2019-05-20 18:30:00', 8);
-
-/* Þarf ekki að búa til en kerfið sér um eftirfarandi:
-
-INSERT INTO user_Profile (user, netfang, fullt_nafn, heimilisfang, simi) VALUES ();
-
-INSERT INTO user_Profile_mynd (mynd, profile_ID) VALUES ();
-
-INSERT INTO user_leitarsaga (profile_ID, eign_ID) VALUES ();
-
-*/

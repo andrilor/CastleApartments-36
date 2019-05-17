@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="upplysingar">
+
+    <div class="profile">
+        <h4>Upplýsingar um kaupanda</h4>
+        <div class="column-left">
+            <p>Fullt nafn:</p>
+            <p>Kennitala:</p>
+            <p>Heimilisfang:</p>
+            <p>Borg:</p>
+            <p>Land:</p>
+            <p>Póstnúmer:</p>
+            <p>Sími:</p>
+            <p>Netfang:</p>
+        </div>
+        <div class="column-right">
+            <p>{{ user.profile.fullt_nafn }}</p>
+            <p>{{ user.profile.kennitala }}</p>
+            <p>{{ user.profile.heimilisfang }}</p>
+            <p>{{ user.profile.borg }}</p>
+            <p>{{ user.profile.land }}</p>
+            <p>{{ user.profile.postnr }}</p>
+            <p>{{ user.profile.simi }}</p>
+            <p>{{ user.profile.netfang }}</p>
+        </div>
+    </div>
+
+    <div class="eignir-profile">
+        <img class="profile-eign-img" src="https://i.imgur.com/{{ eign.eignmynd_set.first.mynd }}.jpg"/>
+        <h5>{{ eign.heimilisfang }}  , {{ eign.postnumer }} {{ eign.baejarfelag }}</h5>
+        <p>stærd: {{ eign.staerd }} fermetrar</p>
+        <h3>verð: {{ eign.verd }} kr.</h3>
+
+    </div>
+
+    <div class="kort">
+        <h4>Kortaupplýsingar</h4>
+        <div class="column-left">
+            <p>Nafn korthafa:</p>
+            <p>Kortanúmer:</p>
+            <p>Gildistími mánuður:</p>
+            <p>Gildistími ár:</p>
+            <p>CVC:</p>
+        </div>
+        <div class="column-right">
+            <p>{{ name }}</p>
+            <p>{{ card }}</p>
+            <p>{{ expmonth }}</p>
+            <p>{{ expyear }}</p>
+            <p>{{ cvc }}</p>
+
+        </div>
+    </div>
+
+
+    <div>
+        <div class="column">
+            <a href="/pantanir/{{ eign.id }}" class="btn">Til baka</a>
+        </div>
+        <div class="column">
+            <a href="/pantanir/kvittun/{{ eign.id }}" class="btn">Staðfesta kaup</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
