@@ -3,48 +3,84 @@ from eignir.models import Eign
 from opinhus.models import opinhus
 from datetime import datetime
 
+
 def index(request):
 
-    if request:
-        eignir = Eign.objects.none()
+    eignir = Eign.objects.all()
+
+    if request.GET:
+
+        baejarfelag = Eign.objects.none()
+        count = 0
+
+        if 'reykjavik' in request.GET:
+            baejarfelag = baejarfelag.union(Eign.objects.filter(baejarfelag__exact='REYKJAVÍK'))
+        else:
+            count = count +1
+
+        if 'kopavogur' in request.GET:
+            baejarfelag = baejarfelag.union(Eign.objects.filter(baejarfelag__exact='KÓPAVOGUR'))
+        else:
+            count = count + 1
+
+        if 'akranes' in request.GET:
+            baejarfelag = baejarfelag.union(Eign.objects.filter(baejarfelag__exact='AKRANES'))
+        else:
+            count = count + 1
+
+        if 'selfoss' in request.GET:
+            baejarfelag = baejarfelag.union(Eign.objects.filter(baejarfelag__exact='SELFOSS'))
+        else:
+            count = count + 1
+
+        if count == 4:
+            baejarfelag = Eign.objects.all()
+
+        count = 0
+        tegund = Eign.objects.none()
+
+        if 'einbyli' in request.GET:
+            tegund = tegund.union(Eign.objects.filter(tegund__exact='Einbýli'))
+        else:
+            count = count + 1
+
+        if 'fjolbyli' in request.GET:
+            tegund = tegund.union(Eign.objects.filter(tegund__exact='Fjölbýli'))
+        else:
+            count = count + 1
+
+        if 'radhus' in request.GET:
+            tegund = tegund.union(Eign.objects.filter(tegund__exact='Raðhús'))
+        else:
+            count = count + 1
+
+        if 'haed' in request.GET:
+            tegund = tegund.union(Eign.objects.filter(tegund__exact='Hæð'))
+        else:
+            count = count + 1
+
+        if 'sumarhus' in request.GET:
+            tegund = tegund.union(Eign.objects.filter(tegund__exact='Sumarhús'))
+        else:
+            count = count + 1
+
+        if count == 5:
+            tegund = Eign.objects.all()
+
+        nidurstada = Eign.objects.none()
 
         if 'search' in request.GET:
             leitar_ord = request.GET['search']
-            eignir += eignir.filter(heimilisfang__icontains=leitar_ord)
+            nidurstada = nidurstada.union(Eign.objects.filter(heimilisfang__icontains=leitar_ord))
+        else:
+            nidurstada = Eign.objects.all()
 
-        if 'reykjavik' in request.GET:
-            eignir += eignir.filter(baejarfelag__exact='REYKJAVÍK')
-
-        if 'kopavogur' in request.GET:
-            eignir += eignir.filter(baejarfelag__exact='KÓPAVOGUR')
-
-        if 'akranes' in request.GET:
-            eignir += eignir.filter(baejarfelag__exact='AKRANES')
-
-        if 'selfoss' in request.GET:
-            eignir += eignir.filter(baejarfelag__exact='SELFOSS')
-
-        if 'einbyli' in request.GET:
-            eignir += eignir.filter(baejarfelag__exact='Einbýli')
-
-        if 'fjolbyli' in request.GET:
-            eignir += eignir.filter(baejarfelag__exact='Fjölbýli')
-
-        if 'radhus' in request.GET:
-            eignir += eignir.filter(baejarfelag__exact='Raðhús')
-
-        if 'haed' in request.GET:
-            eignir += eignir.filter(baejarfelag__exact='Hæð')
-
-        if 'sumarhus' in request.GET:
-            eignir += eignir.filter(baejarfelag__exact='Sumarhús')
-
-    else:
-        eignir = Eign.objects.all()
+        eignir = baejarfelag.intersection(tegund, nidurstada)
 
 
     context = {'eignir': eignir}
     return render(request, 'eignir/index.html', context)
+
 
 def uppl_um_eign(request, id):
     eign = get_object_or_404(Eign, pk=id)
@@ -55,9 +91,11 @@ def uppl_um_eign(request, id):
         'eign': eign, 'opidhus': opidhus, 'dagur': dagur
     })
 
+
 def alphebeticallySortedEignDesc(request):
     context = {'eignir': Eign.objects.order_by('heimilisfang')}
     return render(request, 'eignir/index.html', context)
+
 
 def alphebeticallySortedEignAsc(request):
     context = {'eignir': Eign.objects.order_by('-heimilisfang')}
