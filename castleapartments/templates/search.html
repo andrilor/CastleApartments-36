@@ -1,24 +1,24 @@
 {% block search %}
 
 <div>
-    <form class="form-inline" method="GET" action="{% url 'index-eignir' %}">
+    <form class="form-inline text-center" id="search-form" method="GET" action="{% url 'index-eignir' %}">
 
         <li class="dropdown" id="dropdown2">
             <button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" id="dd" type="button" aria-expanded="false">Svæði</button>
             <div class="dropdown-content">
-                <label class="container">Reykjavík
+                <label class="container-search">Reykjavík
                     <input type="checkbox" name="reykjavik" {% if request.GET.reykjavik %}checked {% endif %}>
                     <span class="checkmark"></span>
                 </label>
-                <label class="container">Kópavogur
+                <label class="container-search">Kópavogur
                     <input type="checkbox" name="kopavogur" {% if request.GET.kopavogur %}checked {% endif %}>
                     <span class="checkmark"></span>
                 </label>
-                <label class="container">Akranes
+                <label class="container-search">Akranes
                     <input type="checkbox"  name="akranes" {% if request.GET.akranes %}checked {% endif %}>
                     <span class="checkmark"></span>
                 </label>
-                <label class="container">Selfoss
+                <label class="container-search">Selfoss
                     <input type="checkbox" name="selfoss" {% if request.GET.selfoss %}checked {% endif %}>
                     <span class="checkmark"></span>
                 </label>
@@ -27,23 +27,23 @@
         <li class="dropdown" id="dropdown2">
             <button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" id="dd" type="button" aria-expanded="false">Tegund</button>
             <div class="dropdown-content">
-                <label class="container">Einbýli
+                <label class="container-search">Einbýli
                     <input type="checkbox" name="einbyli" {% if request.GET.einbyli %}checked {% endif %}>
                     <span class="checkmark"></span>
                 </label>
-                <label class="container">Fjölbýli
+                <label class="container-search">Fjölbýli
                     <input type="checkbox" name="fjolbyli" {% if request.GET.fjolbyli %}checked {% endif %}>
                     <span class="checkmark"></span>
                 </label>
-                <label class="container">Raðhús
+                <label class="container-search">Raðhús
                     <input type="checkbox" name="radhus" {% if request.GET.radhus %}checked {% endif %}>
                     <span class="checkmark"></span>
                 </label>
-                <label class="container">Hæð
+                <label class="container-search">Hæð
                     <input type="checkbox" name="haed" {% if request.GET.haed %}checked {% endif %}>
                     <span class="checkmark"></span>
                 </label>
-                <label class="container">Sumarhús
+                <label class="container-search">Sumarhús
                     <input type="checkbox" name="sumarhus" {% if request.GET.sumarhus %}checked {% endif %}>
                     <span class="checkmark"></span>
                 </label>
@@ -55,7 +55,7 @@
         <input class="form-control mr-sm-2" type="search"
                placeholder="Stimplið inn götuheiti" aria-label="Search" name="search"
                value="{{ request.GET.search }}">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" id="search-btn" type="submit">Search</button>
 
     </form>
 </div>
