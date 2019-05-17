@@ -3,6 +3,7 @@ from datetime import datetime
 from django.db import models
 from eignir.models import Eign
 
+#Heldur utanum tíma á fyiri opin hús og hvert hús getur haft oftar en einusinni opin hús -Andri
 class opinhus(models.Model):
     fra = models.DateTimeField(default=datetime.now, blank=True)
     til = models.DateTimeField(default=datetime.now, blank=True)

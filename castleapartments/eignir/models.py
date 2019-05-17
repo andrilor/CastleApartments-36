@@ -1,6 +1,8 @@
 from django.db import models
 from starfsmenn.models import Starfsmenn
 
+# Eign heldur utanum öll gögn fyrir eignir og er stærtsa taflan sem við erum með
+# Eignir taflan er líka miðpúntur síðurnar -Andri
 class Eign(models.Model):
     heimilisfang = models.CharField(max_length=255)
     baejarfelag = models.CharField(max_length=255)
@@ -36,6 +38,7 @@ class Eign(models.Model):
         return self.heimilisfang
 
 
+# notað fyrir google maps plugin-ið -Andri
 class GPS_Stadsetning(models.Model):
     heimilisfang = models.CharField(max_length=255)
     lat = models.FloatField(max_length=(10, 6))
@@ -44,6 +47,7 @@ class GPS_Stadsetning(models.Model):
     def __str__(self):
         return self.lat and self.lat
 
+# heldur utanum allar myndir fyrir hverja eign -Andri
 class Eignmynd(models.Model):
     mynd = models.CharField(max_length=999)
     eign = models.ForeignKey(Eign, on_delete=models.CASCADE)
