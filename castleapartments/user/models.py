@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
 from eignir.models import Eign
+from django.utils import timezone
 
 class Land(models.Model):
     nafn = models.CharField(max_length=255)
@@ -21,5 +22,6 @@ class Profile(models.Model):
 
 
 class leitarsaga(models.Model):
-    profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    notendanafn=models.ForeignKey(User, on_delete=models.CASCADE)
     eign = models.ForeignKey(Eign, on_delete=models.CASCADE)
+    time_stamp = models.DateTimeField(default=timezone.now)
