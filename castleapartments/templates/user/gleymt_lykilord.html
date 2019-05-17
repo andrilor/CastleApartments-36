@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Búin að gleyma lykilorðinu?{% endblock %}
+
+{% block content %}
+    <h1>Búin að gleyma lykilorðinu?</h1>
+    <p> Með því að setja inn emailið sem er skráð á aðgenginn þinn er hægt er að fá sent notandanafn og endurstilla lykilorð ef það týnist. </p>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Senda email!">
+    </form>
+{% endblock %}

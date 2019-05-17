@@ -2,8 +2,7 @@
 {% block content %}
 {% load static from staticfiles %}
 
-<div class="jumbotron text-center">
-
+    <div class="jumbotron text-center">
     <p>Ad laboris pig cillum, alcatra in rump ground round biltong.</p>
 
 <!-- search goes here -->
@@ -32,8 +31,7 @@
                 Aute short ribs beef ribs t-bone. Turkey turducken andouille anim pork belly nostrud. Do prosciutto in ut.
                 Cupidatat beef do turducken buffalo dolor meatball venison sint ad aliquip commodo aliqua excepteur.</p>
         </div>
-    </div>
-    </div> <!--end blurb -->
+      </div> <!-- end opinhus -->
 
   <div class="container-fluid" id="container-opinhus">
 
@@ -44,32 +42,19 @@
             {% for eign in eignir %}
                 {% if eign.verd > 1 %} <!-- change to something more logical -->
                     {% include 'eignir/eign.html' with eign=eign %}
-                {% endif %}
-            {% endfor %}
-       </div>
-    </div>
-  </div> <!-- end opinhus -->
-
-  <div class="container-fluid" id="container-eignir">
-    <h1 class="text-center">Nýlegar eignir</h1>
-  <!-- Need to limit how many show up -->
-    <div class="elements-container">
-       <div class="eignir">
-            {% for eign in eignir %}
-                {% include 'eignir/eign.html' with eign=eign %}
-            {% endfor %}
-       </div>
-    </div>
-  </div> <!-- end eignir -->
-
-  <div class="container-fluid" id="container-starfsmenn">
-    <h1 class="text-center">Okkar Starfsmenn</h1>
-    <div class="elements-container">
-            {% for starfsmadur in starfsmenn %}
-                {% include 'starfsmenn/starfsmadur.html' with starfsmadur=starfsmadur %}
-            {% endfor %}
+                {% endfor %}
+           </div>
         </div>
-  </div> <!-- end starfsmenn -->
+      </div> <!-- end eignir -->
+
+      <div class="container-fluid" id="container-starfsmenn">
+        <h1 class="text-center">Okkar Starfsmenn</h1>
+        <div class="elements-container">
+                {% for starfsmadur in starfsmenn %}
+                    {% include 'starfsmenn/starfsmadur.html' with starfsmadur=starfsmadur %}
+                {% endfor %}
+            </div>
+      </div> <!-- end starfsmenn -->
 
 
 {% endblock %}

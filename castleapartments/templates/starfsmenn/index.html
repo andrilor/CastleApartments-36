@@ -2,10 +2,10 @@
 
 {% block content %}
 
-<h3> Hér kemur listi af starfsmönnum </h3>
-<div class="starfsmenn">
-    {% for starfsmadur in starfsmenn %}
-        {% include 'starfsmenn/starfsmadur.html' with starfsmadur=starfsmadur %}
-    {% endfor %}
-{% endblock %}
+    <h3> Hér kemur listi af starfsmönnum </h3>
+    <div class="starfsmenn">
+        {% for starfsmadur in starfsmenn %}
+            {% include 'starfsmenn/starfsmadur.html' with starfsmadur=starfsmadur %}
+        {% endfor %}
+    {% endblock %}
 </div>

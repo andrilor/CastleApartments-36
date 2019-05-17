@@ -1,9 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>{{ starfsmenn.nafn }}</h1>
-    <img src="https://i.imgur.com/{{ starfsmenn.starfsmadurmynd_set.first.mynd }}.jpg"/>
-    <p>{{ starfsmenn.simi }}</p>
-    <p>{{ starfsmenn.netfang }}</p>
-    <p>{{ starfsmenn.starfsheiti }}</p>
-    <p>{{ starfsmenn.lysing }}</p>
+
+    <div class="starfsmenn-basic-info">
+    <!-- Grípur uplýsingar um starfsmann úr gagnagrunni - Fannar-->
+        <img class="starfsmenn-info-img" src="https://i.imgur.com/{{ starfsmenn.starfsmadurmynd_set.first.mynd }}.jpg"/>
+        <p>Sími: {{ starfsmenn.simi }}</p>
+        <p>Netfang: {{ starfsmenn.netfang }}</p>
+    </div>
+    <div class="starfsmenn-lysing">
+        <p id="starfs-nafn">{{ starfsmenn.nafn }}</p>
+        <p>{{ starfsmenn.starfsheiti }}</p>
+        <p>{{ starfsmenn.lysing }}</p>
+    </div>
+    <!-- ekki virkt, á að hlaða inn eignum sem starfsmaður selur - Fannar
+    <div class="opinhus">
+        {% for eignstarfsmenn in starfsmenn.eign_set.all %}
+            {% include 'starfsmenn/starfsmenn_eign.html' with eignstarfsmenn=eignstarfsmenn %}
+        {% endfor %}
+    </div>-->
+
 {% endblock %}

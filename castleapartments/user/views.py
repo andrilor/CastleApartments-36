@@ -8,6 +8,7 @@ from user.models import Profile
 from user.forms.profile_form import ProfileForm
 from django.contrib.auth import authenticate, login
 
+#
 def register(request):
     if request.method == 'POST':
         form = UserCreationForm(data = request.POST)
@@ -30,6 +31,9 @@ def profile(request):
             profile = form.save(commit=False)
             profile.user = request.user
             profile.save()
+            u = request.user
+            u.email = profile.netfang
+            u.save()
             return redirect('index-mittsvaedi')
     return render(request, 'user/profile.html', {
         'form': ProfileForm(instance=profile)
