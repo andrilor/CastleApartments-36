@@ -9,16 +9,19 @@
     background-color: #D9C1B4;
 }
 .navbar-brand{
+    margin-left: 10px;
+    height: auto;
     padding: 0px;
-    margin-left: 5px;
 }
 .nav-logo {
+    margin-left: 10%;
     height: auto;
     max-height: 3em;
 }
 
 .navbar-nav{
     padding: 5px;
+    margin-left: 15px;
 }
 
 .navbar>li:hover {
@@ -54,10 +57,6 @@
     z-index: 2;
 }
 
-h1 {
-    font-family: 'Martel', serif;
-}
-
 .elements-container {
     width: 100%;
 	height: auto;
@@ -70,35 +69,29 @@ h1 {
 }
 
 .elements-container .well-eign {
-    display: inline-block;
-    margin-right: 40px;
-    margin-left: 10px;
-    margin-top: 5%;
-    border: 1px black;
-    border-style: solid;
-    width: 30em;
-    background-color: white;
+    display:    inline-block;
+    margin: 20px 20px;
+    background-color: #9f8c84;
 }
 
 .well-eign {
     display: inline-block;
-    margin-right: 40px;
-    margin-left: 10px;
-    margin-top: 2%;
-    margin-bottom: 3%;
-    border: 1px black;
-    border-style: solid;
-    width: 30em;
+    margin: 10px;
+    width: 20em;
+    height: auto;
 }
 
+.well-eign-p {
+    padding: 5px;
+}
 .elements-container .well-starfsmadur {
     display: inline-block;
     margin-right: 40px;
     margin-left: 10px;
     margin-top: 2em;
-    border: 1px black;
+    border: 8px black;
     border-style: solid;
-    width: 20em;
+    width: 18em;
     background-color: white;
 }
 
@@ -119,27 +112,25 @@ h1 {
     margin-top: 2em;
     border: 1px black;
     border-style: solid;
-    width: 20em;
     background-color: white;
 }
 
 .Starfsmenn-img {
-    height: 20em;
     width: 100%;
 }
 
 .eign-img {
-    height: 20em;
+    height: auto;
     width: 100%;
 }
 
 .well-eign .eign-img{
-    height: 20em;
+    height: auto;
     width: 100%;
 }
 
 .well-starfsmadur .Starfsmenn-img{
-    height: 20em;
+    height: auto;
     width: 100%;
 }
 
@@ -147,13 +138,11 @@ h1 {
     width: 90%;
 	height: 18%;
     background-color: lightgrey;
-
     position: relative;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-
     margin: auto;
 
 }
@@ -167,20 +156,52 @@ h1 {
 }
 
 .container-fluid {
-    padding: 60px 50px;
+    padding: 60px 60px;
 }
 
 #container-opinhus{
     background-color: #504F59;
+    color: #c5c5bc;
 }
 
+#container-opinhus>h1{
+    color: #d9c1b4;
+}
+
+#container-opinhus a, #container-eignir a{
+    color: #FCF7F5;
+}
+
+#container-opinhus a:hover, #container-eignir a:hover{
+    color: #A7C1D9;
+}
+
+
+
 #container-starfsmenn{
-    background-color: #A7C1D9;
+    background-color: #9f8c84;
+}
+
+#footer{
+    background-image: url(/static/images/bwreykjavikjpg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: #1e1b19;
+    font-weight: bold;
 }
 
 .jumbotron{
     background-image: url('/static/images/bg1.png');
     padding: 100px 25px;
+}
+
+.btn-primary {
+    background-image: linear-gradient(to top, #9f8c84 0, #d9c1b4 100%);
+    background-color: #bf4c24;
+}
+
+.dropdown-content li{
+    list-style-type: none;
 }
 
 .dropdown #dd {
@@ -196,6 +217,11 @@ html, body {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 100;
     right: -30px;
+}
+
+a:hover{
+    text-decoration: none;
+    background-color: #222222;
 }
 
 .dropbtn {
@@ -222,14 +248,14 @@ html, body {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 160px;
+    min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 100;
 }
 
 .dropdown-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 5px 5px;
     text-decoration: none;
     display: block;
     left: auto;
@@ -444,6 +470,8 @@ nav li #login-content {
     margin: 5px;
 }
 
-.h1 {
+h1 {
     font-family: 'Martel', serif;
+    text-align: center;
+    text-transform: uppercase;
 }
