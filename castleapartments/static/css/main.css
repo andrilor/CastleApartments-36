@@ -343,6 +343,28 @@
     width: 100%;
 }
 
+.starfsmenn-basic-info{
+    display: inline-block;
+    height: 25em;
+    width: 20em;
+    float: left;
+}
+
+.starfsmenn-info-img{
+    width: 100%;
+}
+
+#starfs-nafn{
+    font-size: larger;
+}
+
+.starfsmenn-lysing {
+    display: inline-block;
+    float: right;
+    width: 60%;
+    margin-right: 10em;
+}
+
 .nylegar-eignir-container {
     width: 90%;
 	height: 18%;
