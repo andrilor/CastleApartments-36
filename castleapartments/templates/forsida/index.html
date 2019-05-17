@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static from staticfiles %}
+<div class="jumbotron text-center">
 
-    <div class="jumbotron text-center">
     <p>Ad laboris pig cillum, alcatra in rump ground round biltong.</p>
 
 <!-- search goes here -->
@@ -14,7 +14,6 @@
     </div>
 
 </div> <!--end jumbotron -->
-
 
 <!-- Sections Start Here -->
     <div class="container-fluid bg-grey" id="container-blurb">
@@ -31,30 +30,45 @@
                 Aute short ribs beef ribs t-bone. Turkey turducken andouille anim pork belly nostrud. Do prosciutto in ut.
                 Cupidatat beef do turducken buffalo dolor meatball venison sint ad aliquip commodo aliqua excepteur.</p>
         </div>
-      </div> <!-- end opinhus -->
+    </div>
+    </div> <!--end blurb -->
+
+  <div class="container-fluid" id="container-opinhus">
 
   <div class="container-fluid" id="container-opinhus">
 
     <h1 class="text-center">Opin Hús á Næstunni</h1>
-  <h2 class="text-center">This is a second header</h2>
     <div class="elements-container"> <!-- contains only scrollable objects -->
        <div class="eignir">
             {% for eign in eignir %}
                 {% if eign.verd > 1 %} <!-- change to something more logical -->
                     {% include 'eignir/eign.html' with eign=eign %}
-                {% endfor %}
-           </div>
-        </div>
-      </div> <!-- end eignir -->
+                {% endif %}
+            {% endfor %}
+       </div>
+    </div>
+  </div> <!-- end opinhus -->
 
-      <div class="container-fluid" id="container-starfsmenn">
-        <h1 class="text-center">Okkar Starfsmenn</h1>
-        <div class="elements-container">
-                {% for starfsmadur in starfsmenn %}
-                    {% include 'starfsmenn/starfsmadur.html' with starfsmadur=starfsmadur %}
-                {% endfor %}
-            </div>
-      </div> <!-- end starfsmenn -->
+  <div class="container-fluid" id="container-eignir">
+    <h1 class="text-center">Nýlegar eignir</h1>
+  <!-- Need to limit how many show up -->
+    <div class="elements-container">
+       <div class="eignir">
+            {% for eign in eignir %}
+                {% include 'eignir/eign.html' with eign=eign %}
+            {% endfor %}
+       </div>
+    </div>
+  </div> <!-- end eignir -->
+
+  <div class="container-fluid" id="container-starfsmenn">
+    <h1 class="text-center">Okkar Starfsmenn</h1>
+    <div class="elements-container">
+            {% for starfsmadur in starfsmenn %}
+                {% include 'starfsmenn/starfsmadur.html' with starfsmadur=starfsmadur %}
+            {% endfor %}
+        </div>
+  </div> <!-- end starfsmenn -->
 
 
 {% endblock %}

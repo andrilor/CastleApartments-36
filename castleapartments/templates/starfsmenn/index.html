@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-    <h3> Hér kemur listi af starfsmönnum </h3>
-    <div class="starfsmenn">
-        {% for starfsmadur in starfsmenn %}
-            {% include 'starfsmenn/starfsmadur.html' with starfsmadur=starfsmadur %}
-        {% endfor %}
-    {% endblock %}
-</div>
+  <div class="container-fluid" id="container-starfsmenn">
+    <h1 class="text-center">Okkar Starfsmenn</h1>
+    <div class="elements-container">
+            {% for starfsmadur in starfsmenn %}
+                {% include 'starfsmenn/starfsmadur.html' with starfsmadur=starfsmadur %}
+            {% endfor %}
+        </div>
+  </div> <!-- end starfsmenn -->
+{% endblock %}
