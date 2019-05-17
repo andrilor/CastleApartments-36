@@ -1,5 +1,4 @@
 from importlib import import_module
-
 from django.conf import settings
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
@@ -37,10 +36,27 @@ def profile(request):
     })
 
 def newUser(request):
+    #Tekkur þig til að sjá from-ið annars virkar ekki að inserta upplisingar fyrir newUser_upplysingat -Andri
     return render(request, 'user/newUserProfile.html', {})
-"""
-def logout(self, username):
 
+def newUser_upplysingar(request):
+    #eins og profile nema er nottað í lokuðu umhverfi og linkar a önnur url -Andri
+    newUser_upplysingar = Profile.objects.filter(user=request.user).first()
+    if request.method == 'POST':
+        form = ProfileForm(instance=newUser_upplysingar, data=request.POST)
+        if form.is_valid():
+            newUser_upplysingar = form.save(commit=False)
+            newUser_upplysingar.user = request.user
+            newUser_upplysingar.save()
+            return redirect('index-forsida')
+    return render(request, 'user/newUser_upplysingar.html', {
+        'form': ProfileForm(instance=newUser_upplysingar)
+    })
+
+"""
+#logout og delete_user áttu að vera nýtt til að leifa user að hætta við að búa til notenda en fékk það ekki til að virka -Andri 
+def logout(self, username):
+    
     from django.contrib.auth import get_user, logout
 
     u = User.objects.get(username=username)
@@ -69,15 +85,3 @@ def delete_user(request, username):
 
     return render(request, 'forsida/index.html', context=context)
 """
-def newUser_upplysingar(request):
-    newUser_upplysingar = Profile.objects.filter(user=request.user).first()
-    if request.method == 'POST':
-        form = ProfileForm(instance=newUser_upplysingar, data=request.POST)
-        if form.is_valid():
-            newUser_upplysingar = form.save(commit=False)
-            newUser_upplysingar.user = request.user
-            newUser_upplysingar.save()
-            return redirect('index-forsida')
-    return render(request, 'user/newUser_upplysingar.html', {
-        'form': ProfileForm(instance=newUser_upplysingar)
-    })

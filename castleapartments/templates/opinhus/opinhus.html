@@ -1,9 +1,11 @@
-<div class="well-eign">
-    <a href="/eignir/{{ opidhus.eign.id }}">
-        <img class="eign-img" src="https://i.imgur.com/{{ opidhus.eign.eignmynd_set.first.mynd }}.jpg"/>
-        <h4>{{ opidhus.eign.heimilisfang }}   {{ opidhus.eign.postnumer }} {{ opidhus.eign.baejarfelag }}</h4>
-        <p>Opiðhús:  frá:{{ opidhus.fra }} - Til:{{ opidhus.til }}</p>
-        <p>verð: {{ opidhus.eign.verd }}</p>
-        <p>stærd: {{ opidhus.eign.staerd }}</p>
-    </a>
-</div>
+{% if curent_time.date < opidhus.til.date and curent_time.time < opidhus.til.time %}
+    <div class="well-eign">
+        <a href="/eignir/{{ opidhus.eign.id }}">
+            <img class="eign-img" src="https://i.imgur.com/{{ opidhus.eign.eignmynd_set.first.mynd }}.jpg"/>
+            <h4>{{ opidhus.eign.heimilisfang }}   {{ opidhus.eign.postnumer }} {{ opidhus.eign.baejarfelag }}</h4>
+            <p>Opiðhús:  frá:{{ opidhus.fra }} - Til:{{ opidhus.til }}</p>
+            <p>verð: {{ opidhus.eign.verd }}</p>
+            <p>stærd: {{ opidhus.eign.staerd }}</p>
+        </a>
+    </div>
+{% endif %}

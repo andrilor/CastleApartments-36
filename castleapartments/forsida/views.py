@@ -3,6 +3,7 @@ from eignir.models import Eign
 from starfsmenn.models import Starfsmenn
 
 def index(request):
+    #byrtir allt upplisingar fyrir forsíduna
     context = {'eignir': Eign.objects.all(), 'starfsmenn': Starfsmenn.objects.all().order_by('nafn')}
     return render(request, 'forsida/index.html', context)
 

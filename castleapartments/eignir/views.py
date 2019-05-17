@@ -113,5 +113,6 @@ def priceSortedEignAsc(request):
     return render(request, 'eignir/index.html', context)
 
 def historylog(request ,eign):
+    # þegar notandi ýttir á eign og er login þa kemur færsla í history log svo hægt er að halda utan um leitar sögu notenda -Andri
     logs = leitarsaga(notandanafn_id=request.user.id, eign_id=eign.id)
     logs.save()
