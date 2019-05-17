@@ -1,0 +1,59 @@
+<nav class="navbar navbar-default">
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class-="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                <a class="navbar-brand" href="{% url 'index-forsida' %}"><img class="nav-logo" src="/static/images/logoh.png" alt="Castle Apartments"></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav">
+                  <li>
+                    <a href="{% url 'index-eignir' %}">Eignir</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index-opinhus' %}">Opin Hús</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index-verdmat' %}">Verðmat</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index-starfsmenn' %}">Starfsmenn</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'index-umokkur' %}">Um Okkur</a>
+                  </li>
+                </ul>
+
+
+                <div class="dropdown">
+                    {% if user.is_authenticated %}
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">{{ user.profile.fullt_nafn }}
+                        <span class="caret"></span></button>
+                    {% else %}
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Innskráning
+                        <span class="caret"></span></button>
+                    {% endif %}
+
+                    <ul class="dropdown-content">
+                        {% if user.is_authenticated %}
+
+                            <li><a href="{% url 'index-mittsvaedi' %}">Mitt svæði</a></li>
+                            <li><a href="{% url 'logout' %}">Skrá út</a></li>
+                        {% else %}
+
+                            <li><a href="{% url 'login' %}">Skrá inn</a></li>
+                            <li><a href="{% url 'register' %}">Nýr notandi</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+
+
+
+          </div>
+        </nav>

@@ -2,106 +2,70 @@
 {% block content %}
 {% load static from staticfiles %}
 
-<!-- Full Page Image Header with Vertically Centered Content -->
-<header class="masthead">
+<div class="jumbotron text-center">
 
-  <div class="container h-100">
+    <img src="/static/images/logos.png">
 
-    <div class="row h-100 align-items-center">
-        <!-- carousel goes here -->
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>
+    <p>We specialize in blah blah.</p>
 
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="/static/images/ourLordAndSavior.jpg" alt="Chania">
-              <div class="carousel-caption">
-                <h3>Los Angeles</h3>
-                <p>LA is always so much fun!</p>
-              </div>
-            </div>
+<!-- Comment out search
+    <div class="row align-items-center">
 
-            <div class="item">
-              <img src="/static/images/ourLordAndSavior.jpg" alt="Chicago">
-              <div class="carousel-caption">
-                <h3>Chicago</h3>
-                <p>Thank you, Chicago!</p>
-              </div>
-            </div>
+        {% block search %}
+            {% include 'search.html' %}
+        {% endblock %}
 
-            <div class="item">
-              <img src="/static/images/ourLordAndSavior.jpg" alt="New York">
-              <div class="carousel-caption">
-                <h3>New York</h3>
-                <p>We love the Big Apple!</p>
-              </div>
-            </div>
-          </div>
+    </div>-->
+</div> <!--end jumbotron -->
 
-          <!-- Left and right controls -->
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-          </a>
+
+<!-- Sections Start Here -->
+    <div class="container-fluid bg-grey" id="container-blurb">
+    <div class="row">
+        <div class="col-sm-8">
+            <h1 class="text-center">About Castle Apartments</h1>
+            <p>Blah blah blah blah</p>
         </div>
-    <!-- carousel ends here -->
-
+        <div class="col-sm-4">
+            <!-- <span class="" -->
+        </div>
     </div>
-  </div>
-</header>
-<body>
-{% block search %}
-    {% include 'search.html' %}
-{% endblock %}
-<section class="py-5">
-  <div class="container">
-    <h1 class="font-weight-light">Opin hús á næstunni</h1>
-    <div class="opin-hus-container">
+    </div> <!--end blurb -->
+
+  <div class="container-fluid" id="container-opinhus">
+    <h1 class="text-center">Opin Hús á Næstunni</h1>
+  <h2 class="text-center">This is a second header</h2>
+    <div class="elements-container"> <!-- contains only scrollable objects -->
+       <div class="eignir">
+            {% for eign in eignir %}
+                {% if eign.verd > 1 %} <!-- change to something more logical -->
+                    {% include 'eignir/eign.html' with eign=eign %}
+                {% endif %}
+            {% endfor %}
+       </div>
+    </div>
+  </div> <!-- end opinhus -->
+
+  <div class="container-fluid" id="container-eignir">
+    <h1 class="text-center">Nýlegar eignir</h1>
+  <!-- Need to limit how many show up -->
+    <div class="elements-container">
        <div class="eignir">
             {% for eign in eignir %}
                 {% include 'eignir/eign.html' with eign=eign %}
             {% endfor %}
        </div>
     </div>
-  </div>
-</section>
+  </div> <!-- end eignir -->
 
-<section class="py-5">
-  <div class="container">
-    <h1 class="font-weight-light">Nýlegar eignir</h1>
-    <div class="opin-hus-container">
-       <div class="eignir">
-            {% for eign in eignir %}
-                {% include 'eignir/eign.html' with eign=eign %}
-            {% endfor %}
-       </div>
-    </div>
-  </div>
-</section>
-</body>
-
-<section class="py-5">
-  <div class="container">
-    <h1 class="font-weight-light">Starfsmenn</h1>
-    <div class="opin-hus-container">
-        <div class="starfsmenn">
+  <div class="container-fluid" id="container-starfsmenn">
+    <h1 class="text-center">Okkar Starfsmenn</h1>
+    <div class="elements-container">
             {% for starfsmadur in starfsmenn %}
                 {% include 'starfsmenn/starfsmadur.html' with starfsmadur=starfsmadur %}
             {% endfor %}
         </div>
-    </div>
-  </div>
-</section>
-</body>
+  </div> <!-- end starfsmenn -->
+
 
 {% endblock %}

@@ -2,11 +2,15 @@
 
 {% block content %}
 
-<h3> Hér kemur listi af eignum </h3>
-<div class="opinhus">
-    {% for opidhus in opinhus %}
-        {% include 'opinhus/opinhus.html' with opidhus=opidhus %}
-    {% endfor %}
-</div>
-
+  <div class="container-fluid">
+    <h1>Opin Hús á Næstunni</h1>
+  <h2>This is a second header</h2>
+    <div class="elements-container"> <!-- contains only scrollable objects -->
+       <div class="opinhus">
+        {% for opidhus in opinhus %}
+            {% include 'opinhus/opinhus.html' with opidhus=opidhus %}
+        {% endfor %}
+        </div>
+    </div>
+  </div> <!-- end opinhus -->
 {% endblock %}
