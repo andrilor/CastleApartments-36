@@ -30,6 +30,9 @@ def profile(request):
             profile = form.save(commit=False)
             profile.user = request.user
             profile.save()
+            u = request.user
+            u.email = profile.netfang
+            u.save()
             return redirect('index-mittsvaedi')
     return render(request, 'user/profile.html', {
         'form': ProfileForm(instance=profile)
