@@ -75,6 +75,15 @@
             </div>
         </div>
     </div>
+    {% if user.is_authenticated %}
+
+        <a href="/pantanir/{{ eign.id }}" class="btn">Kaupa núna</a>
+
+    {% else %}
+
+        <a href="{% url 'login' %}" class="btn">Kaupa núna</a>
+
+    {% endif %}
     <div class="eignir-img-gallery" id="pop">
         {% for eignmynd in eign.eignmynd_set.all %}
             <img class="eign-uppl-img" id="{{ eignmynd.mynd }}" src="https://i.imgur.com/{{ eignmynd.mynd }}.jpg" onclick="enlarge(this.id)"/>
@@ -86,4 +95,3 @@
         {% endfor %}
     </div>
 {% endblock %}
-
