@@ -1,10 +1,8 @@
 {% block search %}
-
-
-<div>
-    <form class="form-inline">
-
-        <li class="dropdown" id="dropdown2">
+<div class="well-lg" id="searchbar">
+    <div class="col-lg-6">
+        <div class="dd-group">
+            <li class="dropdown">
             <button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" id="dd" type="button" aria-expanded="false">Svæði</button>
             <div class="dropdown-content">
                 <label class="container">Reykjavík
@@ -48,15 +46,16 @@
                     <input type="checkbox" name="sumarhus">
                     <span class="checkmark"></span>
                 </label>
-            </div>
-        </li>
-
-
-
-        <input class="form-control mr-sm-2" type="search"
-               placeholder="Stimplið inn götuheiti" aria-label="Search" name="search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-
-    </form>
+              </div>
+            </li>
+            <button class="btn btn-default" id="hreinsa" type="button">Hreinsa</button>
+        </div>
+        <div class="input-group form-inline">
+          <input type="text" class="form-control" placeholder="Stimplið inn götuheiti...">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Leita</button>
+          </span>
+        </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
 </div>
 {% endblock %}
